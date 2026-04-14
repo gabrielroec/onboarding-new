@@ -1,0 +1,27 @@
+.installments-display {
+  margin: 0;
+  padding-block-start: 0.35em;
+  font-size: min(0.85em, 1.4rem);
+  line-height: 1.35;
+  color: rgb(var(--color-foreground));
+  opacity: 0.85;
+}
+
+.installments-display__text {
+  margin: 0;
+}
+
+.installments-display__note {
+  margin: 0.35em 0 0;
+  font-size: 0.92em;
+  opacity: 0.9;
+}
+
+.totals + .totals__installments-wrap,
+.totals__installments-wrap {
+  width: 100%;
+}
+
+.installments-display--cart {
+  padding-block-start: 0.5rem;
+}

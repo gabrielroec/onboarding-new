@@ -1,0 +1,70 @@
+{% comment %}
+  Free shipping progress bar. Uses settings.free_shipping_minimum (store currency major units, e.g. 150 = R$150).
+  @param context {String} 'page' | 'drawer'
+{% endcomment %}
+{%- assign fs_major = settings.free_shipping_minimum | default: 0 | plus: 0 -%}
+{%- if fs_major > 0 -%}
+{%- liquid
+  assign threshold_cents = fs_major | times: 100
+  assign subtotal = cart.items_subtotal_price
+  assign qualified = false
+  if subtotal >= threshold_cents
+    assign qualified = true
+  endif
+
+  assign progress_pct = subtotal | times: 100 | divided_by: threshold_cents
+  if progress_pct > 100
+    assign progress_pct = 100
+  endif
+
+  assign remaining_cents = threshold_cents | minus: subtotal
+  if remaining_cents < 0
+    assign remaining_cents = 0
+  endif
+
+  assign remaining_money = remaining_cents | money
+  assign fs_uid = context | default: 'cart' | handleize
+-%}
+
+<free-shipping-progress
+  class="free-shipping-progress"
+  {% if cart.item_count == 0 %}
+    hidden
+  {% endif %}
+  data-threshold-cents="{{ threshold_cents }}"
+  data-currency="{{ cart.currency.iso_code | escape }}"
+  data-locale="{{ request.locale.iso_code | escape }}"
+  data-template-remaining="{{ 'sections.cart.free_shipping_remaining' | t: amount: '__REPLACE__' | escape }}"
+  data-template-qualified="{{ 'sections.cart.free_shipping_qualified' | t | escape }}"
+  data-context="{{ context | default: 'page' }}"
+  data-initial-progress="{{ progress_pct }}"
+>
+  <p
+    class="free-shipping-progress__message caption-large"
+    id="free-shipping-progress-message-{{ fs_uid }}"
+    aria-live="polite"
+    aria-atomic="true"
+  >
+    {%- if qualified -%}
+      {{ 'sections.cart.free_shipping_qualified' | t }}
+    {%- else -%}
+      {{ 'sections.cart.free_shipping_remaining' | t: amount: remaining_money }}
+    {%- endif -%}
+  </p>
+
+  <div
+    class="free-shipping-progress__track"
+    role="progressbar"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="{{ progress_pct }}"
+    aria-labelledby="free-shipping-progress-message-{{ fs_uid }}"
+    aria-valuetext="{{ progress_pct }}%"
+  >
+    <div
+      class="free-shipping-progress__fill"
+      style="width: {{ progress_pct }}%;"
+    ></div>
+  </div>
+</free-shipping-progress>
+{%- endif -%}

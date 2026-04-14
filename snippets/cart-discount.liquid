@@ -1,0 +1,87 @@
+{% comment %}
+  Discount code field for cart (page or drawer). Requires settings.show_add_discount_code.
+  @param context {String} 'page' | 'drawer'
+{% endcomment %}
+{%- if settings.show_add_discount_code -%}
+{%- liquid
+  assign discount_codes = cart.cart_level_discount_applications | where: 'type', 'discount_code' | map: 'title'
+-%}
+
+<div
+  class="cart-discount"
+  data-cart-discount
+  data-cart-discount-context="{{ context | default: 'page' }}"
+  data-success-template="{{ 'sections.cart.discount_success' | t | escape }}"
+>
+  <details
+    class="cart-discount__disclosure{% if discount_codes.size > 0 %} cart-discount__disclosure--has-codes{% endif %}"
+    {% if discount_codes.size > 0 %}
+      open
+    {% endif %}
+  >
+    <summary class="cart-discount__summary">
+      <span class="cart-discount__label">{{ 'sections.cart.discount_code' | t }}</span>
+      <span class="svg-wrapper cart-discount__caret">
+        {{- 'icon-caret.svg' | inline_asset_content -}}
+      </span>
+    </summary>
+
+    <div class="cart-discount__panel">
+      <form class="cart-discount__form" novalidate>
+        <label class="visually-hidden" for="CartDiscountInput-{{ context }}">
+          {{- 'sections.cart.discount_code' | t -}}
+        </label>
+        <input
+          id="CartDiscountInput-{{ context }}"
+          class="field__input cart-discount__input"
+          type="text"
+          name="discount"
+          autocomplete="off"
+          placeholder="{{ 'sections.cart.discount_placeholder' | t }}"
+          {% if cart == empty %}
+            disabled
+          {% endif %}
+        >
+        <button type="submit" class="button button--secondary cart-discount__apply">
+          {{ 'sections.cart.discount_apply' | t }}
+        </button>
+      </form>
+
+      <div class="cart-discount__success visually-hidden" role="status" aria-live="polite" hidden></div>
+
+      <div class="cart-discount__error" role="alert" aria-live="assertive" hidden>
+        <span class="svg-wrapper">
+          {{- 'icon-error.svg' | inline_asset_content -}}
+        </span>
+        <small class="cart-discount__error-text"></small>
+      </div>
+
+      {%- if discount_codes.size > 0 -%}
+        <div class="cart-discount__toolbar">
+          <button type="button" class="button button--tertiary cart-discount__remove-all" data-cart-discount-remove-all>
+            {{ 'sections.cart.discount_remove_all' | t }}
+          </button>
+        </div>
+      {%- endif -%}
+
+      <ul class="cart-discount__codes list-unstyled" role="list">
+        {%- for code in discount_codes -%}
+          <li class="cart-discount__pill" data-discount-code="{{ code | escape }}">
+            <span class="cart-discount__pill-code">{{ code | escape }}</span>
+            <button
+              type="button"
+              class="cart-discount__pill-remove button button--tertiary"
+              data-cart-discount-remove
+              aria-label="{{ 'sections.cart.discount_remove' | t: code: code }}"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-close.svg' | inline_asset_content -}}
+              </span>
+            </button>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </details>
+</div>
+{%- endif -%}

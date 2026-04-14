@@ -1,0 +1,105 @@
+{% comment %}
+  Informative installments (merchant rules). @param price_cents @param context: 'cart' | 'product' @param variant (optional, for product availability)
+{% endcomment %}
+{%- liquid
+  assign show_feature = settings.show_merchant_installments
+  assign max_p = settings.installments_max | default: 12 | plus: 0
+  assign min_major = settings.installments_min_per_payment | default: 0 | plus: 0
+  assign min_cents = min_major | times: 100
+
+  assign can_run = false
+  if show_feature and max_p >= 2 and min_cents > 0
+    assign can_run = true
+  endif
+-%}
+
+{%- unless can_run -%}
+{%- else -%}
+  {%- if context == 'cart' -%}
+    {%- liquid
+      assign price_cents_num = price_cents | default: 0 | plus: 0
+      assign render_ok = false
+      assign n = 0
+      assign per_cents = 0
+      if price_cents_num > 0
+        assign n_by_min = price_cents_num | divided_by: min_cents
+        if n_by_min < 1
+          assign n_by_min = 1
+        endif
+        assign n = max_p
+        if n_by_min < n
+          assign n = n_by_min
+        endif
+        if n >= 2
+          assign per_cents = price_cents_num | plus: n | minus: 1 | divided_by: n
+          assign render_ok = true
+        endif
+      endif
+
+      if settings.currency_code_enabled
+        assign per_money = per_cents | money_with_currency
+      else
+        assign per_money = per_cents | money
+      endif
+
+      if render_ok
+        assign display_text = 'content.installments_display_text' | t: count: n, amount: per_money
+      else
+        assign display_text = ''
+      endif
+    -%}
+    <installments-display-dynamic
+      class="installments-display installments-display--cart totals__installments-dynamic"
+      data-price-cents="{{ price_cents_num }}"
+      data-max-installments="{{ max_p }}"
+      data-min-cents-per-payment="{{ min_cents }}"
+      data-currency="{{ cart.currency.iso_code | escape }}"
+      data-locale="{{ request.locale.iso_code | escape }}"
+      data-template-js="{{ 'content.installments_display_template_js' | t | escape }}"
+      {% unless render_ok %}
+        hidden
+      {% endunless %}
+    >
+      <p class="installments-display__text caption-large">{{ display_text }}</p>
+    </installments-display-dynamic>
+  {%- else -%}
+    {%- liquid
+      assign render_ok = false
+      assign n = 0
+      assign per_cents = 0
+      assign price_cents_num = price_cents | default: 0 | plus: 0
+
+      if price_cents_num > 0
+        assign n_by_min = price_cents_num | divided_by: min_cents
+        if n_by_min < 1
+          assign n_by_min = 1
+        endif
+        assign n = max_p
+        if n_by_min < n
+          assign n = n_by_min
+        endif
+        if n >= 2
+          assign per_cents = price_cents_num | plus: n | minus: 1 | divided_by: n
+          assign render_ok = true
+        endif
+      endif
+    -%}
+
+    {%- if render_ok -%}
+      {%- liquid
+        if settings.currency_code_enabled
+          assign per_money = per_cents | money_with_currency
+        else
+          assign per_money = per_cents | money
+        endif
+        assign display_text = 'content.installments_display_text' | t: count: n, amount: per_money
+      -%}
+      <div class="installments-display installments-display--product">
+        <p class="installments-display__text caption-large">{{ display_text }}</p>
+        {%- if settings.installments_show_disclaimer -%}
+          <p class="installments-display__note caption">{{ 'content.installments_display_disclaimer' | t }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endunless -%}
