@@ -542,8 +542,8 @@
     }
   },
   "content": {
-    "installments_display_text": "Em até {{ count }}x de {{ amount }}",
-    "installments_display_template_js": "Em até [count]x de [amount]",
+    "installments_display_text": "Em até {{ count }}x de {{ amount }} sem juros",
+    "installments_display_template_js": "Em até [count]x de [amount] sem juros",
     "installments_display_disclaimer": "Informação meramente indicativa. Sujeito à aprovação da operadora do cartão."
   },
   "recipient": {

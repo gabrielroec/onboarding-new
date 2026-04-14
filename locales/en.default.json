@@ -531,8 +531,8 @@
     }
   },
   "content": {
-    "installments_display_text": "Up to {{ count }} payments of {{ amount }}",
-    "installments_display_template_js": "Up to [count] payments of [amount]",
+    "installments_display_text": "Up to {{ count }} payments of {{ amount }}, interest-free",
+    "installments_display_template_js": "Up to [count] payments of [amount], interest-free",
     "installments_display_disclaimer": "For information only. Subject to approval by your card issuer."
   },
   "recipient": {
