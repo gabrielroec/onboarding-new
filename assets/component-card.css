@@ -594,6 +594,7 @@
   }
 }
 
+/* TASK: 09 — Etiquetas personalizadas (metaobject) no card: flex + ellipsis. */
 /* Custom product labels (metaobject custom_label) — múltiplas badges na mesma área */
 .card__badge--custom-labels {
   display: flex;

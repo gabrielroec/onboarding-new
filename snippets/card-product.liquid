@@ -40,7 +40,11 @@
       assign ratio = 1
     endif
 
+    # TASK: 09 — Etiquetas via metaobjects (lista em custom.custom_label; fallback custom.product_labels).
     assign custom_labels = card_product.metafields.custom.custom_label.value
+    if custom_labels == blank
+      assign custom_labels = card_product.metafields.custom.product_labels.value
+    endif
     assign has_valid_custom_product_labels = false
     if custom_labels != blank
       for l in custom_labels
@@ -144,19 +148,19 @@
             </h3>
           </div>
           <div class="card__badge {{ settings.badge_position }}{% if has_valid_custom_product_labels %} card__badge--custom-labels{% endif %}">
-            {%- if has_valid_custom_product_labels -%}
-              {% render 'card-product-custom-labels',
-                card_product: card_product,
-                section_id: section_id,
-                badge_id_prefix: 'NoMediaStandardBadge'
-              %}
-            {%- elsif card_product.available == false -%}
+            {%- if card_product.available == false -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
               >
                 {{- 'products.product.sold_out' | t -}}
               </span>
+            {%- elsif has_valid_custom_product_labels -%}
+              {% render 'card-product-custom-labels',
+                card_product: card_product,
+                section_id: section_id,
+                badge_id_prefix: 'NoMediaStandardBadge'
+              %}
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -578,19 +582,19 @@
           {% endif %}
         {% endif %}
         <div class="card__badge {{ settings.badge_position }}{% if has_valid_custom_product_labels %} card__badge--custom-labels{% endif %}">
-          {%- if has_valid_custom_product_labels -%}
-            {% render 'card-product-custom-labels',
-              card_product: card_product,
-              section_id: section_id,
-              badge_id_prefix: 'Badge'
-            %}
-          {%- elsif card_product.available == false -%}
+          {%- if card_product.available == false -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"
               class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
             >
               {{- 'products.product.sold_out' | t -}}
             </span>
+          {%- elsif has_valid_custom_product_labels -%}
+            {% render 'card-product-custom-labels',
+              card_product: card_product,
+              section_id: section_id,
+              badge_id_prefix: 'Badge'
+            %}
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"

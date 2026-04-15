@@ -1,18 +1,21 @@
 {% comment %}
-  Etiquetas do metafield custom.custom_label (lista de metaobjects custom_label).
-  Espera que exista pelo menos um título não vazio (validado no card-product).
+  TASK: 09 — Etiquetas dinâmicas (metaobject): título + cores de fundo/texto no card.
+  Metacampo: lista `custom.custom_label` (fallback `custom.product_labels`). Até 3 entradas com título no card.
   Parâmetros: card_product, section_id, badge_id_prefix
-  Cores: objeto Color da Shopify usa .rgb como "r g b" — aplicar como rgb(r g b), não só o valor cru.
+  Cores: objeto Color da Shopify — .rgb como "r g b" → rgb(r g b).
 {% endcomment %}
 {% liquid
   assign rendered = 0
   assign labels = card_product.metafields.custom.custom_label.value
+  if labels == blank
+    assign labels = card_product.metafields.custom.product_labels.value
+  endif
 %}
 {% for label in labels %}
   {% assign t = label.title.value | default: label.title | strip %}
   {% if t != blank %}
     {% assign rendered = rendered | plus: 1 %}
-    {% if rendered <= 2 %}
+    {% if rendered <= 3 %}
       {% liquid
         assign bg = label.background_color.value | default: label.background_color
         assign fg = label.text_color.value | default: label.text_color
