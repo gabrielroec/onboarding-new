@@ -1,3 +1,7 @@
+{% comment %}
+  TASK: 04 — Seção "Vídeo e Texto" (baseada em Imagem e Texto).
+  Origens: vídeo Shopify (upload), YouTube/Vimeo (video_url). Fallback no editor; placeholder discreto na loja sem mídia válida.
+{% endcomment %}
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 {{ 'component-video-and-text.css' | asset_url | stylesheet_tag }}
 
@@ -46,7 +50,7 @@
       >
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
           <div
-            class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if has_valid_video %} media{% else %} image-with-text__media--placeholder placeholder{% endif %} video-and-text__shell{% if has_valid_video == false and request.design_mode %} video-and-text__shell--editor{% endif %}"
+            class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if has_valid_video %} media{% else %} image-with-text__media--placeholder placeholder{% endif %} video-and-text__shell{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if has_valid_video == false and request.design_mode %} video-and-text__shell--editor{% endif %}"
           >
             {% render 'video-and-text-media', section: section %}
           </div>
@@ -233,6 +237,26 @@
       ],
       "default": "image_first",
       "label": "t:sections.image-with-text.settings.layout.label"
+    },
+    {
+      "type": "select",
+      "id": "image_behavior",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.all.animation.image_behavior.options__1.label"
+        },
+        {
+          "value": "ambient",
+          "label": "t:sections.all.animation.image_behavior.options__2.label"
+        },
+        {
+          "value": "zoom-in",
+          "label": "t:sections.all.animation.image_behavior.options__4.label"
+        }
+      ],
+      "default": "none",
+      "label": "t:sections.all.animation.image_behavior.label"
     },
     {
       "type": "header",

@@ -1,5 +1,6 @@
 {% comment %}
-  Mídia da seção vídeo e texto: Shopify, YouTube ou Vimeo.
+  TASK: 04 — Mídia da seção "Vídeo e Texto" (Shopify video_tag, iframe YouTube/Vimeo).
+  Loja: sem mídia válida, placeholder neutro. Editor: mensagens de configuração/URL inválida/embed não suportado.
   @param section {section}
 {% endcomment %}
 {%- liquid
@@ -98,10 +99,20 @@
         <p class="video-and-text__editor-msg video-and-text__editor-msg--hint caption">
           {{- 'content.video_with_text_editor_empty' | t -}}
         </p>
-        {%- if src == 'external' and section.settings.external_video_url != blank and section.settings.external_video_url.id == blank -%}
-          <p class="video-and-text__editor-msg video-and-text__editor-msg--error caption">
-            {{- 'content.video_with_text_editor_invalid_url' | t -}}
-          </p>
+        {%- if src == 'external' and section.settings.external_video_url != blank -%}
+          {%- assign ev_ed = section.settings.external_video_url -%}
+          {%- if ev_ed.id == blank -%}
+            <p class="video-and-text__editor-msg video-and-text__editor-msg--error caption">
+              {{- 'content.video_with_text_editor_invalid_url' | t -}}
+            </p>
+          {%- else -%}
+            {%- assign ev_ed_type = ev_ed.type | downcase -%}
+            {%- if ev_ed_type != 'youtube' and ev_ed_type != 'vimeo' -%}
+              <p class="video-and-text__editor-msg video-and-text__editor-msg--error caption">
+                {{- 'content.video_with_text_editor_invalid_url' | t -}}
+              </p>
+            {%- endif -%}
+          {%- endif -%}
         {%- endif -%}
       </div>
     </div>

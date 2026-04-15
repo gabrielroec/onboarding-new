@@ -1431,7 +1431,7 @@
         },
         "video": {
           "label": "Vídeo",
-          "info": "Envie um ficheiro num formato suportado pela Shopify (ex.: MP4). Ficheiros muito grandes podem demorar a carregar."
+          "info": "Use MP4, MOV ou outro formato aceite pela Shopify. Há limites de tamanho no carregamento do admin; ficheiros demasiado grandes falham antes de chegarem ao tema."
         },
         "external_video_url": {
           "label": "URL do vídeo",

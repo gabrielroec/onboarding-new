@@ -1585,7 +1585,7 @@
         },
         "video": {
           "label": "Video",
-          "info": "Upload a file in a format supported by Shopify (e.g. MP4). Very large files may load slowly for customers."
+          "info": "Use MP4, MOV, or another format accepted by Shopify. Size limits apply in the admin uploader; oversized uploads fail before they reach the theme."
         },
         "external_video_url": {
           "label": "Video URL",
