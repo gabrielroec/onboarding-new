@@ -137,6 +137,7 @@
         %}
       {%- endunless -%}
     {%- endif -%}
+    {% comment %}TASK: 05 — Linha PIX abaixo do preço principal (desativar com hide_pix_price ou defer_pix_price).{% endcomment %}
     {%- liquid
       assign show_pix_line = true
       if hide_pix_price

@@ -114,6 +114,7 @@
                     {%- endunless -%}
                   </h2>
                 {%- when 'price' -%}
+                  {% comment %}TASK: 05 — Mesmo padrão que main-product (preço + linha PIX).{% endcomment %}
                   <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                     {%- render 'price',
                       product: product,

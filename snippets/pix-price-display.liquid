@@ -1,5 +1,7 @@
 {% comment %}
-  Preço promocional PIX (informativo). @param price_cents @param variant (opcional)
+  TASK: 05 — Preço informativo com desconto PIX (settings.pix_discount_percent).
+  Cálculo sobre o preço atual em centavos; só renderiza se houver desconto e variante disponível.
+  @param price_cents {Number} @param variant {Variant} opcional (disponibilidade)
 {% endcomment %}
 {%- liquid
   assign pct = settings.pix_discount_percent | default: 0 | plus: 0

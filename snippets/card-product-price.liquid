@@ -1,6 +1,7 @@
 {% comment %}
   Preço do card + parcelamento + PIX informativos. Parcelas e PIX ficam aqui para aparecer na vitrine
   mesmo que o `price.liquid` na CDN esteja desatualizado.
+  TASK: 05 — PIX abaixo do preço na vitrine (render explícito após price com defer_pix_price).
   @param card_product {Product}
   @param price_class {String} optional
   @param show_compare_at_price {Boolean} optional, default true

@@ -283,6 +283,7 @@
       {{ 'installments-display.css' | asset_url | stylesheet_tag }}
     {%- endunless -%}
 
+    {% comment %}TASK: 05 — CSS do preço PIX só quando o desconto está ativo (> 0%).{% endcomment %}
     {%- assign pix_pct_css = settings.pix_discount_percent | default: 0 | plus: 0 -%}
     {%- if pix_pct_css > 0 -%}
       {{ 'pix-price-display.css' | asset_url | stylesheet_tag }}

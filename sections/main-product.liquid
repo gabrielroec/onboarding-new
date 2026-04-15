@@ -106,6 +106,7 @@
                   </a>
                 </div>
               {%- when 'price' -%}
+                {% comment %}TASK: 05 — Preço principal + linha PIX destacada (atualiza com #price no product-info.js).{% endcomment %}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
