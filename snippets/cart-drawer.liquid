@@ -499,6 +499,7 @@
         <!-- Subtotals -->
 
         {%- if settings.show_add_discount_code and cart != empty -%}
+          {% comment %}TASK: 01 - Aplicação de cupom no carrinho (render no cart drawer).{% endcomment %}
           {% render 'cart-discount', context: 'drawer' %}
         {%- endif -%}
         {%- if cart != empty -%}

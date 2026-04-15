@@ -1,4 +1,6 @@
 (() => {
+  // TASK: 01 - Aplicação de cupom no carrinho (commit por tarefa).
+  // Responsável por aplicar/remover discount codes via /cart/update.js e atualizar seções cart page/drawer.
   if (!window.routes?.cart_update_url || typeof fetchConfig !== 'function') return;
 
   const cartUpdateJsUrl = () => {
@@ -83,6 +85,8 @@
       apply: applyCartPageSections,
     };
   };
+
+  const normalizeCode = (code) => (code || '').trim().toLowerCase();
 
   const existingCodes = (root) => {
     const out = [];
@@ -176,9 +180,8 @@
       const attemptedCode = input?.value?.trim();
 
       if (attemptedCode && Array.isArray(data.discount_codes)) {
-        const norm = (c) => (c || '').toLowerCase();
         const rejected = data.discount_codes.find(
-          (d) => norm(d.code) === norm(attemptedCode) && d.applicable === false
+          (d) => normalizeCode(d.code) === normalizeCode(attemptedCode) && d.applicable === false
         );
         if (rejected) {
           if (input) input.value = '';
@@ -220,7 +223,7 @@
       const code = input?.value?.trim();
       if (!code) return;
       const codes = existingCodes(root);
-      if (codes.includes(code)) return;
+      if (codes.some((existing) => normalizeCode(existing) === normalizeCode(code))) return;
       postDiscount(root, [...codes, code].join(','));
     },
     true

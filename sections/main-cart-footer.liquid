@@ -45,6 +45,7 @@
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 {%- if settings.show_add_discount_code -%}
+                  {% comment %}TASK: 01 - Aplicação de cupom no carrinho (render no cart page).{% endcomment %}
                   {% render 'cart-discount', context: 'page' %}
                 {%- endif -%}
                 {% render 'free-shipping-progress', context: 'page' %}
