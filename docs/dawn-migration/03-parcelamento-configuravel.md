@@ -107,9 +107,9 @@ Código completo:
   .installments-display {
     margin: 0;
     padding-block-start: 0.35em;
-    font-size: min(0.85em, var(--font-paragraph--size, 1rem));
-    font-weight: var(--font-paragraph--weight, 400);
-    color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text));
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(var(--color-foreground));
     line-height: 1.35;
   }
 
@@ -119,7 +119,7 @@ Código completo:
 
   .installments-display__note {
     margin: 0.35em 0 0;
-    font-size: 0.92em;
+    font-size: 13px;
     opacity: 0.9;
   }
 

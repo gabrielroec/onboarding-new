@@ -122,7 +122,7 @@
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
-        {% assign page_width_num = settings.page_width | plus: 0 %}
+        {% assign page_width_num = settings.layout_page_width | plus: 0 %}
         --page-width: {{ page_width_num | divided_by: 10 }}rem;
         --page-width-margin: {% if page_width_num == 1600 %}2{% else %}0{% endif %}rem;
 
@@ -159,7 +159,7 @@
         --blog-card-shadow-vertical-offset: {{ settings.blog_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
         --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
 
-        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
+        --badge-corner-radius: {{ settings.ui_badge_corner_radius | divided_by: 10.0 }}rem;
 
         --popup-border-width: {{ settings.popup_border_thickness }}px;
         --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};

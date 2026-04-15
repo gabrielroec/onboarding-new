@@ -61,7 +61,7 @@
                     -%}
                     {%- if large_block -%}
                       {%- capture sizes -%}
-                        {% if section.blocks.size == 1 -%}(min-width: {{ settings.page_width }}px) calc({{ settings.page_width }}px - 100px){% else %}(min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - 100px) * 2 / 3 - {{ grid_space_desktop }}){% endif %},
+                        {% if section.blocks.size == 1 -%}(min-width: {{ settings.layout_page_width }}px) calc({{ settings.layout_page_width }}px - 100px){% else %}(min-width: {{ settings.layout_page_width }}px) calc(({{ settings.layout_page_width }}px - 100px) * 2 / 3 - {{ grid_space_desktop }}){% endif %},
                         {% if section.blocks.size == 1 -%}(min-width: 750px) calc(100vw - 100px){% else %}(min-width: 750px) calc((100vw - 100px) * 2 / 3 - {{ grid_space_desktop }}){% endif %},
                         {% if section.blocks.size == 2 and section.settings.mobile_layout == 'collage' -%}calc((100vw - 30px) / 2){% else %}calc(100vw - 30px){% endif %}
                         {%- endcapture -%}
@@ -74,7 +74,7 @@
                       }}
                     {%- else -%}
                       {%- capture sizes -%}
-                           (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - 100px) * 1 / 3 - {{ grid_space_desktop }}),
+                           (min-width: {{ settings.layout_page_width }}px) calc(({{ settings.layout_page_width }}px - 100px) * 1 / 3 - {{ grid_space_desktop }}),
                            (min-width: 750px) calc((100vw - 100px) * 1 / 3 - {{ grid_space_desktop }}),
                            {% if section.settings.mobile_layout == 'collage' %}calc((100vw - 30px) / 2 - {{ grid_space_mobile }}){% else %}calc(100vw - 30px){% endif %}
                         {%- endcapture -%}
@@ -139,11 +139,11 @@
 
                         {%- if block.settings.cover_image != blank -%}
                           {%- capture sizes -%}
-                            (min-width: {{ settings.page_width }}px)
+                            (min-width: {{ settings.layout_page_width }}px)
                             {% if section.blocks.size == 1 -%}
-                              calc({{ settings.page_width }}px - 100px)
+                              calc({{ settings.layout_page_width }}px - 100px)
                             {%- else -%}
-                              {{- settings.page_width | minus: 100 | times: 0.67 | round }}px
+                              {{- settings.layout_page_width | minus: 100 | times: 0.67 | round }}px
                             {%- endif -%}
                             , (min-width: 750px)
                             {%- if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif -%}

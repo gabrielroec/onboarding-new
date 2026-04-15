@@ -151,7 +151,7 @@
     "settings": [
       {
         "type": "range",
-        "id": "page_width",
+        "id": "layout_page_width",
         "min": 1000,
         "max": 1600,
         "step": 100,
@@ -1244,7 +1244,7 @@
       },
       {
         "type": "range",
-        "id": "badge_corner_radius",
+        "id": "ui_badge_corner_radius",
         "min": 0,
         "max": 40,
         "step": 2,

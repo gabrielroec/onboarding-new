@@ -33,7 +33,7 @@
   {% if section.settings.full_width -%}
     100vw
   {%- else -%}
-    (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px)
+    (min-width: {{ settings.layout_page_width }}px) {{ settings.layout_page_width | minus: 100 }}px, (min-width: 750px)
     calc(100vw - 10rem), 100vw
   {%- endif %}
 {%- endcapture -%}

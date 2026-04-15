@@ -31,6 +31,9 @@
     endif
   -%}
   <div class="pix-price-display" data-pix-discount-percent="{{ pct }}">
+    <span class="pix-price-display__icon" aria-hidden="true">
+      {{- 'pix-svgrepo-com.svg' | inline_asset_content -}}
+    </span>
     <p class="pix-price-display__text">
       {{- 'content.pix_price_line' | t: amount: pix_money, percent: pct -}}
     </p>

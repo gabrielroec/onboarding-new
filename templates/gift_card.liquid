@@ -69,7 +69,7 @@
         --color-soldout-badge: {{ badge_scheme.settings.background.red }},{{ badge_scheme.settings.background.green }},{{ badge_scheme.settings.background.blue }};
         --color-soldout-badge-label: {{ badge_scheme.settings.text.red }},{{ badge_scheme.settings.text.green }},{{ badge_scheme.settings.text.blue }};
 
-        {% assign page_width_num = settings.page_width | plus: 0 %}
+        {% assign page_width_num = settings.layout_page_width | plus: 0 %}
         --page-width: {{ page_width_num | divided_by: 10 }}rem;
         --page-width-margin: {% if page_width_num == 1600 %}2{% else %}0{% endif %}rem;
 
