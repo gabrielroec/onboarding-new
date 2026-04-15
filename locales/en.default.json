@@ -116,8 +116,8 @@
   "products": {
     "product": {
       "buy_together": {
-        "heading": "Complete the look",
-        "button": "Add both to cart",
+        "heading": "Bundle & save",
+        "button": "Add both items to cart",
         "adding": "Adding…",
         "error": "Could not add items. Please try again."
       },

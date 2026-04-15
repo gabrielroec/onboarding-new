@@ -497,6 +497,7 @@
                   show_pickup_availability: true
                 -%}
               {%- when 'buy_together' -%}
+                {% comment %}TASK: 08 — Compre junto (metacampo + botão único no JS).{% endcomment %}
                 {%- render 'product-buy-together',
                   product: product,
                   block: block,
@@ -951,6 +952,10 @@
       "name": "t:sections.main-product.blocks.buy_together.name",
       "limit": 1,
       "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.main-product.blocks.buy_together.settings.paragraph.content"
+        },
         {
           "type": "text",
           "id": "heading",

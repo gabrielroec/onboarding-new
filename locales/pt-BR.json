@@ -117,8 +117,8 @@
   "products": {
     "product": {
       "buy_together": {
-        "heading": "Leve junto",
-        "button": "Adicionar os 2 itens ao carrinho",
+        "heading": "Leve Junto e Economize!",
+        "button": "Adicionar os 2 itens ao Carrinho",
         "adding": "Adicionando…",
         "error": "Não foi possível adicionar. Tente novamente."
       },

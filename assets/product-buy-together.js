@@ -1,6 +1,8 @@
 (() => {
   if (!window.routes?.cart_add_url || typeof fetchConfig !== 'function') return;
 
+  /** TASK: 08 — Compre junto: adiciona variante atual + recomendada num único POST /cart/add.js (items[]). */
+
   const getCartUi = () => document.querySelector('cart-notification') || document.querySelector('cart-drawer');
 
   const fetchCartState = async () => {
@@ -33,22 +35,25 @@
     }
   };
 
-  const addSingleItem = async ({ variantId, sections, sectionsUrl }) => {
-    const config = fetchConfig('javascript');
-    config.headers['X-Requested-With'] = 'XMLHttpRequest';
-    delete config.headers['Content-Type'];
-
-    const formData = new FormData();
-    formData.append('id', variantId);
-    formData.append('quantity', '1');
+  const addItemsTogether = async ({ variantIds, sections, sectionsUrl }) => {
+    const payload = {
+      items: variantIds.map((id) => ({ id: parseInt(String(id), 10), quantity: 1 })),
+    };
     if (sections && sections.length) {
-      formData.append('sections', sections);
-      formData.append('sections_url', sectionsUrl || window.location.pathname);
+      payload.sections = sections.join(',');
+      payload.sections_url = sectionsUrl || window.location.pathname;
     }
 
-    config.body = formData;
+    const baseConfig = fetchConfig('javascript');
+    const response = await fetch(`${routes.cart_add_url}`, {
+      ...baseConfig,
+      headers: {
+        ...baseConfig.headers,
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      body: JSON.stringify(payload),
+    });
 
-    const response = await fetch(`${routes.cart_add_url}`, config);
     const data = await response.json();
 
     if (data.status || data.errors) {
@@ -165,15 +170,8 @@
               : [];
 
           try {
-            // Fluxo simples e compatível com Dawn:
-            // 1) adiciona produto atual
-            // 2) adiciona recomendado + seções para atualizar drawer/notification
-            await addSingleItem({
-              variantId: currentId,
-            });
-
-            const data = await addSingleItem({
-              variantId: recId,
+            const data = await addItemsTogether({
+              variantIds: [currentId, recId],
               sections: sectionsToRender,
               sectionsUrl: window.location.pathname,
             });

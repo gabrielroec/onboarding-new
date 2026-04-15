@@ -1,3 +1,4 @@
+/* TASK: 08 — Compre junto na PDP (cartão compacto). */
 /* Compre junto — PDP (Dawn): cartão compacto e limpo */
 .product-buy-together {
   --pbt-radius: min(var(--border-radius, 0), 0.8rem);

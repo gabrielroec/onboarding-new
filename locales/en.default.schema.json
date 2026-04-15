@@ -2167,9 +2167,12 @@
         "buy_together": {
           "name": "Buy together",
           "settings": {
+            "paragraph": {
+              "content": "Uses the product metafield `custom.product_recommended` (product reference). Create it under Settings > Custom data > Products. The block only shows when it’s set and the recommended product is in stock."
+            },
             "heading": {
               "label": "Heading",
-              "default": "Complete the look"
+              "default": "Bundle & save"
             }
           }
         },

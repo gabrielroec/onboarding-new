@@ -1820,11 +1820,14 @@
           }
         },
         "buy_together": {
-          "name": "Buy together",
+          "name": "Compre junto",
           "settings": {
+            "paragraph": {
+              "content": "Usa o metacampo de produto `custom.product_recommended` (referência a produto). Crie-o em Configurações > Dados personalizados > Produtos. O bloco só aparece se estiver preenchido e o produto extra tiver stock."
+            },
             "heading": {
-              "label": "Heading",
-              "default": "Complete the look"
+              "label": "Título",
+              "default": "Leve Junto e Economize!"
             }
           }
         },
@@ -2711,9 +2714,12 @@
         "buy_together": {
           "name": "Compre junto",
           "settings": {
+            "paragraph": {
+              "content": "Usa o metacampo de produto `custom.product_recommended` (referência a produto). Crie-o em Configurações > Dados personalizados > Produtos. O bloco só aparece se estiver preenchido e o produto extra tiver stock."
+            },
             "heading": {
               "label": "Título",
-              "default": "Leve junto"
+              "default": "Leve Junto e Economize!"
             }
           }
         },
