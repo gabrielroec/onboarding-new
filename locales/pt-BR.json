@@ -341,7 +341,7 @@
       "discount_remove": "Remover {{ code }}",
       "discount_remove_all": "Remover todos os cupons",
       "free_shipping_remaining": "Faltam {{ amount }} para o frete grátis!",
-      "free_shipping_qualified": "Parabéns! Você liberou frete grátis!"
+      "free_shipping_qualified": "Parabéns! Você ganhou frete grátis!"
     },
     "footer": {
       "payment": "Formas de pagamento"

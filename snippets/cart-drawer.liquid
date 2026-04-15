@@ -503,6 +503,7 @@
           {% render 'cart-discount', context: 'drawer' %}
         {%- endif -%}
         {%- if cart != empty -%}
+          {% comment %}TASK: 02 - Barra de progresso de frete grátis (render no cart drawer).{% endcomment %}
           {% render 'free-shipping-progress', context: 'drawer' %}
         {%- endif -%}
 

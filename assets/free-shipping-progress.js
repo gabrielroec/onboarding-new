@@ -1,4 +1,6 @@
 (() => {
+  // TASK: 02 - Barra de progresso de frete grátis (commit por tarefa).
+  // Atualiza mensagem + progresso visual ao reagir a eventos de cartUpdate.
   const getSubtotalCents = (cart) => {
     if (typeof cart?.items_subtotal_price === 'number') return cart.items_subtotal_price;
     if (Array.isArray(cart?.items)) {

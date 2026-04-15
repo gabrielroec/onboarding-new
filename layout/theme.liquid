@@ -274,6 +274,7 @@
 
     {%- assign fs_min_check = settings.free_shipping_minimum | default: 0 | plus: 0 -%}
     {%- if fs_min_check > 0 -%}
+      {% comment %}TASK: 02 - Barra de progresso de frete grátis (estilos do componente).{% endcomment %}
       {{ 'free-shipping-progress.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
@@ -405,6 +406,7 @@
 
     {%- assign fs_min_js = settings.free_shipping_minimum | default: 0 | plus: 0 -%}
     {%- if fs_min_js > 0 -%}
+      {% comment %}TASK: 02 - Barra de progresso de frete grátis (lógica JS do componente).{% endcomment %}
       <script src="{{ 'free-shipping-progress.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 

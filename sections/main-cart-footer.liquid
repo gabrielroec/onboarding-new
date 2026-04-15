@@ -48,6 +48,7 @@
                   {% comment %}TASK: 01 - Aplicação de cupom no carrinho (render no cart page).{% endcomment %}
                   {% render 'cart-discount', context: 'page' %}
                 {%- endif -%}
+                {% comment %}TASK: 02 - Barra de progresso de frete grátis (render no cart page).{% endcomment %}
                 {% render 'free-shipping-progress', context: 'page' %}
                 <div>
                   {%- if cart.cart_level_discount_applications.size > 0 -%}
