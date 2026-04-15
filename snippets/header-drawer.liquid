@@ -133,6 +133,7 @@
                   {%- endif -%}
                 </li>
               {%- endfor -%}
+              {% comment %}TASK: 07 — Link exclusivo no drawer (mobile/tablet).{% endcomment %}
               {% render 'customer-exclusive-nav-link',
                 variant: 'drawer',
                 show_exclusive_menu_item: show_exclusive_menu_item,

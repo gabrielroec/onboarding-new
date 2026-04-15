@@ -117,6 +117,7 @@
     assign header_tag = 'sticky-header'
   endif
 
+  # TASK: 07 — Menu exclusivo por tag (link extra no menu; Liquid por pedido após login; não bloqueia URL da coleção).
   assign exclusive_allowed_tag = section.settings.exclusive_menu_customer_tag | strip
   assign exclusive_collection_setting = section.settings.exclusive_menu_collection
   assign exclusive_nav_label = section.settings.exclusive_menu_label | strip
@@ -124,10 +125,15 @@
     assign exclusive_nav_label = exclusive_collection_setting.title
   endif
   assign show_exclusive_menu_item = false
-  if customer and exclusive_allowed_tag != blank and exclusive_collection_setting != blank and exclusive_nav_label != blank
-    if customer.tags contains exclusive_allowed_tag
-      assign show_exclusive_menu_item = true
-    endif
+  assign exclusive_tag_needle = exclusive_allowed_tag | downcase | strip
+  if customer and exclusive_tag_needle != blank and exclusive_collection_setting != blank and exclusive_nav_label != blank
+    for cust_tag in customer.tags
+      assign cust_tag_cmp = cust_tag | downcase | strip
+      if cust_tag_cmp == exclusive_tag_needle
+        assign show_exclusive_menu_item = true
+        break
+      endif
+    endfor
   endif
 %}
 
