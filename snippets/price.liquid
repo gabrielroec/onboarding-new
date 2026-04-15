@@ -161,6 +161,7 @@
       {%- endunless -%}
     {%- endif -%}
     {%- if show_badges -%}
+      {% comment %}TASK: 10 — Substitui texto fixo "Promoção" por % OFF (snippet discount-percent-off-text).{% endcomment %}
       <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
         {% render 'discount-percent-off-text',
           compare_at_price: compare_at_price,

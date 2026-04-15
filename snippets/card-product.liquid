@@ -56,6 +56,7 @@
       endfor
     endif
   -%}
+  {% comment %}TASK: 10 — Texto da badge de promoção no card: % OFF ou vazio (fallback "Promoção" no card).{% endcomment %}
   {% capture card_sale_badge_text %}
     {% render 'discount-percent-off-text',
       compare_at_price: card_product.compare_at_price,

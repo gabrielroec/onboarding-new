@@ -1,5 +1,6 @@
 {% comment %}
-  Texto da badge de desconto (ex.: "25% OFF"). Vazio se não houver promoção real ou produto indisponível.
+  TASK: 10 — Badge % OFF: ((compare_at - price) * 100) / compare_at | round; só se compare_at > price > 0 e available.
+  Texto via `products.product.percent_off`. Na PDP o bloco de preço é re-renderizado no servidor ao mudar variante (product-info.js).
   Parâmetros: compare_at_price, price, available (boolean)
 {% endcomment %}
 {% liquid

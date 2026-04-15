@@ -69,6 +69,7 @@
   display: inline-block;
 }
 
+/* TASK: 10 — Com "Sold out", esconder badge de promoção (% OFF) para dar prioridade ao esgotado. */
 .price--sold-out .price__badge-sale {
   display: none;
 }
