@@ -47,9 +47,6 @@
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
           <div
             class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if has_valid_video %} media{% else %} image-with-text__media--placeholder placeholder{% endif %} video-and-text__shell{% if has_valid_video == false and request.design_mode %} video-and-text__shell--editor{% endif %}"
-            {% if section.settings.height == 'adapt' %}
-              style="padding-bottom: 0;"
-            {% endif %}
           >
             {% render 'video-and-text-media', section: section %}
           </div>
