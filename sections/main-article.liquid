@@ -1,3 +1,4 @@
+{% comment %}TASK: 06 — Bloco opcional "Produtos relacionados" (metacampo no post).{% endcomment %}
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template">
@@ -69,6 +70,21 @@
           {{ block.shopify_attributes }}
         >
           {{ article.content }}
+        </div>
+
+      {%- when 'related_products' -%}
+        {%- liquid
+          assign rp_dom = section.id | append: '-' | append: block.id
+        -%}
+        <div
+          class="article-template__related-products page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          {% render 'article-related-products-output',
+            article: article,
+            cfg: block.settings,
+            dom_id: rp_dom
+          %}
         </div>
 
       {%- when 'share' -%}
@@ -355,6 +371,225 @@
       "type": "content",
       "name": "t:sections.main-article.blocks.content.name",
       "limit": 1
+    },
+    {
+      "type": "related_products",
+      "name": "t:sections.main-article.blocks.related_products.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.article-related-products.settings.paragraph_metafield.content"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "t:sections.article-related-products.settings.title.label",
+          "default": "t:sections.article-related-products.settings.title.default"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h2",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.featured-collection.settings.header_collection.content"
+        },
+        {
+          "type": "range",
+          "id": "columns_desktop",
+          "min": 2,
+          "max": 4,
+          "step": 1,
+          "default": 4,
+          "label": "t:sections.featured-collection.settings.columns_desktop.label"
+        },
+        {
+          "type": "select",
+          "id": "columns_mobile",
+          "options": [
+            {
+              "value": "1",
+              "label": "t:sections.featured-collection.settings.columns_mobile.options__1.label"
+            },
+            {
+              "value": "2",
+              "label": "t:sections.featured-collection.settings.columns_mobile.options__2.label"
+            }
+          ],
+          "default": "2",
+          "label": "t:sections.featured-collection.settings.columns_mobile.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "swipe_on_mobile",
+          "default": true,
+          "label": "t:sections.article-related-products.settings.swipe_on_mobile.label",
+          "info": "t:sections.article-related-products.settings.swipe_on_mobile.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_desktop_slider",
+          "label": "t:sections.article-related-products.settings.enable_desktop_slider.label",
+          "info": "t:sections.article-related-products.settings.enable_desktop_slider.info",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "full_width",
+          "label": "t:sections.featured-collection.settings.full_width.label",
+          "default": false
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "info": "t:sections.all.colors.has_cards_info",
+          "default": "scheme-1"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.featured-collection.settings.header.content"
+        },
+        {
+          "type": "select",
+          "id": "image_ratio",
+          "options": [
+            {
+              "value": "adapt",
+              "label": "t:sections.featured-collection.settings.image_ratio.options__1.label"
+            },
+            {
+              "value": "portrait",
+              "label": "t:sections.featured-collection.settings.image_ratio.options__2.label"
+            },
+            {
+              "value": "square",
+              "label": "t:sections.featured-collection.settings.image_ratio.options__3.label"
+            }
+          ],
+          "default": "adapt",
+          "label": "t:sections.featured-collection.settings.image_ratio.label"
+        },
+        {
+          "type": "select",
+          "id": "image_shape",
+          "options": [
+            {
+              "value": "default",
+              "label": "t:sections.all.image_shape.options__1.label"
+            },
+            {
+              "value": "arch",
+              "label": "t:sections.all.image_shape.options__2.label"
+            },
+            {
+              "value": "blob",
+              "label": "t:sections.all.image_shape.options__3.label"
+            },
+            {
+              "value": "chevronleft",
+              "label": "t:sections.all.image_shape.options__4.label"
+            },
+            {
+              "value": "chevronright",
+              "label": "t:sections.all.image_shape.options__5.label"
+            },
+            {
+              "value": "diamond",
+              "label": "t:sections.all.image_shape.options__6.label"
+            },
+            {
+              "value": "parallelogram",
+              "label": "t:sections.all.image_shape.options__7.label"
+            },
+            {
+              "value": "round",
+              "label": "t:sections.all.image_shape.options__8.label"
+            }
+          ],
+          "default": "default",
+          "label": "t:sections.all.image_shape.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_secondary_image",
+          "default": false,
+          "label": "t:sections.featured-collection.settings.show_secondary_image.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_vendor",
+          "default": false,
+          "label": "t:sections.featured-collection.settings.show_vendor.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_rating",
+          "default": false,
+          "label": "t:sections.featured-collection.settings.show_rating.label"
+        },
+        {
+          "type": "select",
+          "id": "quick_add",
+          "default": "none",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.label",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_1"
+            },
+            {
+              "value": "standard",
+              "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_2"
+            },
+            {
+              "value": "bulk",
+              "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 36
+        }
+      ]
     },
     {
       "type": "share",

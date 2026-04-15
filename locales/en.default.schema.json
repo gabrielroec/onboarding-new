@@ -1829,6 +1829,9 @@
         "content": {
           "name": "Content"
         },
+        "related_products": {
+          "name": "Related products"
+        },
         "share": {
           "name": "Share",
           "settings": {

@@ -1517,6 +1517,9 @@
         "content": {
           "name": "Conteúdo"
         },
+        "related_products": {
+          "name": "Produtos relacionados"
+        },
         "share": {
           "name": "Compartilhar",
           "settings": {
