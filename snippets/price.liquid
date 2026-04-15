@@ -129,6 +129,7 @@
             assign inst_variant = product.selected_or_first_available_variant
           endif
         -%}
+        {% comment %}TASK: 03 - Exibição de parcelamento (render em PDP/listagens que usam price.liquid).{% endcomment %}
         {% render 'installments-display',
           price_cents: price,
           variant: inst_variant,

@@ -279,6 +279,7 @@
     {%- endif -%}
 
     {%- unless settings.show_merchant_installments == false -%}
+      {% comment %}TASK: 03 - Exibição de parcelamento (estilos do componente).{% endcomment %}
       {{ 'installments-display.css' | asset_url | stylesheet_tag }}
     {%- endunless -%}
 
@@ -411,6 +412,7 @@
     {%- endif -%}
 
     {%- unless settings.show_merchant_installments == false -%}
+      {% comment %}TASK: 03 - Exibição de parcelamento (lógica JS no carrinho).{% endcomment %}
       <script src="{{ 'installments-display.js' | asset_url }}" defer="defer"></script>
     {%- endunless -%}
   </body>

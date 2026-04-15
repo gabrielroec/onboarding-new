@@ -1,3 +1,4 @@
+/* TASK: 03 - Exibição de parcelamento com regras customizáveis (commit por tarefa). */
 /* Dawn: `.price > * { display: inline-block }` coloca parcelas ao lado do preço; no card fica ilegível ou “some”. */
 .price > .installments-display {
   display: block !important;

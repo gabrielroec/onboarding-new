@@ -1,4 +1,6 @@
 (() => {
+  // TASK: 03 - Exibição de parcelamento com regras customizáveis (commit por tarefa).
+  // Atualiza o parcelamento no total do carrinho ao reagir a cartUpdate.
   const formatMoneyCents = (cents, currency, locale) => {
     const cur = currency || 'USD';
     const loc = locale && locale.length ? locale : undefined;

@@ -19,6 +19,7 @@
   defer_pix_price: true
 %}
 {%- unless settings.show_merchant_installments == false -%}
+  {% comment %}TASK: 03 - Exibição de parcelamento (render no card de produto).{% endcomment %}
   {% render 'installments-display',
     price_cents: card_product.selected_or_first_available_variant.price,
     variant: card_product.selected_or_first_available_variant,
