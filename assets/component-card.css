@@ -593,3 +593,24 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+/* Custom product labels (metaobject custom_label) — múltiplas badges na mesma área */
+.card__badge--custom-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: flex-end;
+  justify-content: flex-start;
+  max-width: calc(100% - 2.6rem);
+}
+
+.card__badge--custom-labels.right {
+  justify-content: flex-end;
+}
+
+.card-product-custom-label {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

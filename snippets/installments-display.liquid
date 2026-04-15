@@ -2,9 +2,22 @@
   Informative installments (merchant rules). @param price_cents @param context: 'cart' | 'product' @param variant (optional, for product availability)
 {% endcomment %}
 {%- liquid
-  assign show_feature = settings.show_merchant_installments
+  # Checkbox novo: se ausente no JSON do tema (nil), mostrar parcelamento; só false desliga.
+  assign show_feature = true
+  if settings.show_merchant_installments == false
+    assign show_feature = false
+  endif
+
   assign max_p = settings.installments_max | default: 12 | plus: 0
-  assign min_major = settings.installments_min_per_payment | default: 0 | plus: 0
+  if max_p < 2
+    assign max_p = 12
+  endif
+
+  # Mínimo 0/vazio no admin → usar 5 (moeda principal), senão can_run nunca liga.
+  assign min_major = settings.installments_min_per_payment | plus: 0
+  if min_major <= 0
+    assign min_major = 5
+  endif
   assign min_cents = min_major | times: 100
 
   assign can_run = false

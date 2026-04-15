@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "settings_schema": {
     "colors": {
@@ -109,7 +110,11 @@
         "currency_code_enabled": {
           "label": "Códigos de moeda"
         },
-        "paragraph": "Os preços do carrinho e do checkout sempre mostram os códigos de moeda"
+        "paragraph": "Os preços do carrinho e do checkout sempre mostram os códigos de moeda",
+        "pix_discount_percent": {
+          "label": "Desconto PIX (%)",
+          "info": "Exibe um preço com desconto informativo nos cartões de produto e na página do produto. Use 0% para ocultar. Não altera o checkout."
+        }
       }
     },
     "layout": {
@@ -853,6 +858,29 @@
         "name": "Coleção em destaque"
       }
     },
+    "article-related-products": {
+      "name": "Produtos relacionados (blog)",
+      "settings": {
+        "paragraph_metafield": {
+          "content": "Os produtos vêm do metacampo do artigo custom.related_products (lista de referências a produto, máx. 4). Crie-o em Configurações > Dados personalizados > Posts do blog."
+        },
+        "title": {
+          "label": "Título",
+          "default": "Produtos relacionados"
+        },
+        "swipe_on_mobile": {
+          "label": "Carrossel no celular",
+          "info": "Quando houver mais produtos do que cabem numa linha, exibe um carrossel horizontal em telas pequenas."
+        },
+        "enable_desktop_slider": {
+          "label": "Carrossel no desktop",
+          "info": "Quando houver mais produtos do que cabem numa linha, exibe um carrossel horizontal em telas grandes."
+        }
+      },
+      "presets": {
+        "name": "Produtos relacionados (blog)"
+      }
+    },
     "footer": {
       "name": "Rodapé",
       "blocks": {
@@ -1020,6 +1048,24 @@
         "enable_customer_avatar": {
           "label": "Avatar de conta de cliente",
           "info": "Visível apenas quando os clientes fizerem login com o Shop. [Gerenciar contas de cliente](/admin/settings/customer_accounts)"
+        },
+        "header__exclusive_menu": {
+          "content": "Menu de coleção exclusiva"
+        },
+        "paragraph__exclusive_menu": {
+          "content": "Exibe um link extra no menu principal para uma coleção, apenas para clientes logados com uma tag específica. Não bloqueia a URL da coleção — quem tiver o link pode abrir."
+        },
+        "exclusive_menu_customer_tag": {
+          "label": "Tag do cliente",
+          "info": "Deve coincidir exatamente com uma tag do cliente (após remover espaços). Exemplo: employee-access"
+        },
+        "exclusive_menu_collection": {
+          "label": "Coleção exclusiva",
+          "info": "Coleção aberta ao clicar no item do menu."
+        },
+        "exclusive_menu_label": {
+          "label": "Texto do link no menu",
+          "info": "Se estiver em branco, usa o título da coleção."
         },
         "header__utilities": {
           "content": "Serviços públicos"
@@ -1365,6 +1411,75 @@
         "name": "Imagem com texto"
       }
     },
+    "video-with-text": {
+      "name": "Vídeo e texto",
+      "presets": {
+        "name": "Vídeo e texto"
+      },
+      "settings": {
+        "header_video": {
+          "content": "Vídeo"
+        },
+        "video_source": {
+          "label": "Origem do vídeo",
+          "options__1": {
+            "label": "Upload na Shopify"
+          },
+          "options__2": {
+            "label": "YouTube ou Vimeo"
+          }
+        },
+        "video": {
+          "label": "Vídeo",
+          "info": "Envie um ficheiro num formato suportado pela Shopify (ex.: MP4). Ficheiros muito grandes podem demorar a carregar."
+        },
+        "external_video_url": {
+          "label": "URL do vídeo",
+          "info": "Cole um link do YouTube ou Vimeo. Outros serviços não são suportados."
+        },
+        "external_video_alt": {
+          "label": "Título do vídeo (acessibilidade)",
+          "info": "Descrição curta para leitores de ecrã (apenas embeds)."
+        },
+        "video_autoplay": {
+          "label": "Reprodução automática"
+        },
+        "video_loop": {
+          "label": "Repetir vídeo"
+        },
+        "video_layout": {
+          "label": "Ajuste do vídeo",
+          "options__1": {
+            "label": "Preencher (pode cortar)"
+          },
+          "options__2": {
+            "label": "Conter (faixas laterais)"
+          }
+        },
+        "height": {
+          "options__1": {
+            "label": "Adaptar ao vídeo (16:9)"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Vídeo primeiro"
+          },
+          "options__2": {
+            "label": "Texto primeiro"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "default": "Vídeo e texto"
+            }
+          }
+        }
+      }
+    },
     "main-article": {
       "name": "Post do blog",
       "blocks": {
@@ -1698,6 +1813,15 @@
             "show_gift_card_recipient": {
               "label": " Opções de envio de cartão-presente",
               "info": "Os clientes podem adicionar uma mensagem pessoal e agendar a data de envio. [Saiba mais](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            }
+          }
+        },
+        "buy_together": {
+          "name": "Buy together",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Complete the look"
             }
           }
         },
@@ -2578,6 +2702,15 @@
             "show_dynamic_checkout": {
               "label": "Botões de checkout dinâmico",
               "info": "Os clientes verão a opção de pagamento preferida deles. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            }
+          }
+        },
+        "buy_together": {
+          "name": "Compre junto",
+          "settings": {
+            "heading": {
+              "label": "Título",
+              "default": "Leve junto"
             }
           }
         },

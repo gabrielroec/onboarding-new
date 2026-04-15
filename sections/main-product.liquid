@@ -111,8 +111,18 @@
                     product: product,
                     use_variant: true,
                     show_badges: true,
-                    price_class: 'price--large'
+                    price_class: 'price--large',
+                    defer_pix_price: true
                   -%}
+                  {%- liquid
+                    assign _pixp_pdp = settings.pix_discount_percent | default: 0 | plus: 0
+                  -%}
+                  {%- if _pixp_pdp > 0 and product.quantity_price_breaks_configured? != true -%}
+                    {% render 'pix-price-display',
+                      price_cents: product.selected_or_first_available_variant.price,
+                      variant: product.selected_or_first_available_variant
+                    %}
+                  {%- endif -%}
                 </div>
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
@@ -484,6 +494,13 @@
                   product_form_id: product_form_id,
                   section_id: section.id,
                   show_pickup_availability: true
+                -%}
+              {%- when 'buy_together' -%}
+                {%- render 'product-buy-together',
+                  product: product,
+                  block: block,
+                  product_form_id: product_form_id,
+                  section_id: section.id
                 -%}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
@@ -925,6 +942,19 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
+      "type": "buy_together",
+      "name": "t:sections.main-product.blocks.buy_together.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:sections.main-product.blocks.buy_together.settings.heading.label",
+          "default": "t:sections.main-product.blocks.buy_together.settings.heading.default"
         }
       ]
     },

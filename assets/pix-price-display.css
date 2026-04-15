@@ -1,0 +1,21 @@
+.pix-price-display {
+  margin: 0;
+  padding-block-start: 0.35em;
+  line-height: 1.35;
+  color: rgba(var(--color-foreground), 0.82);
+}
+
+.pix-price-display__text {
+  margin: 0;
+  font-size: min(0.9em, 1.4rem);
+}
+
+.price.price--large .pix-price-display {
+  padding-block-start: 0.5rem;
+}
+
+.price.price--large .pix-price-display__text {
+  font-size: clamp(1.3rem, 1.15em, 1.5rem);
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}

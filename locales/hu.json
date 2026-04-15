@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,51 @@
   "products": {
     "product": {
       "add_to_cart": "Hozzáadás a kosárhoz",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Válassz a lehetőségek közül",
+      "choose_product_options": "Termékváltozatok – {{ product_name }}",
       "description": "Leírás",
+      "duties_and_taxes_included": "Tartalmazza a vámokat és az adókat.",
+      "duties_included": "Tartalmazza a vámokat.",
+      "inventory_in_stock": "Raktáron",
+      "inventory_in_stock_show_count": "{{ quantity }} raktáron",
+      "inventory_low_stock": "Alacsony készlet",
+      "inventory_low_stock_show_count": "Alacsony készlet: csak {{ quantity }} van raktáron",
+      "inventory_out_of_stock": "Nincs készleten",
+      "inventory_out_of_stock_continue_selling": "Raktáron",
+      "media": {
+        "open_media": "{{ index }}. médiafájl megnyitása a modális párbeszédpanelen",
+        "play_model": "Lejátszás a 3D-megjelenítőben",
+        "play_video": "Videó lejátszása",
+        "gallery_viewer": "Galériamegjelenítő",
+        "load_image": "{{ index }}. kép betöltése galérianézetben",
+        "load_model": "{{ index }}. térhatású modell betöltése galérianézetben",
+        "load_video": "{{ index }}. videó lejátszása galérianézetben",
+        "image_available": "{{ index }}. kép betöltve galérianézetben"
+      },
+      "nested_label": "{{ title }} – {{ parent_title }}",
       "on_sale": "Akciós",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Webáruház adatai",
+        "check_other_stores": "Kapható más webáruházakban?",
+        "pick_up_available": "Személyesen átvehető",
+        "pick_up_available_at_html": "Személyesen átvehető itt: <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Személyesen egyelőre nem vehető át itt: <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Nem sikerült betölteni az átvehetőségi adatokat",
+        "refresh": "Frissítés"
+      },
+      "price": {
+        "from_price_html": "Legalacsonyabb ár: {{ price }}",
+        "regular_price": "Normál ár",
+        "sale_price": "Akciós ár",
+        "unit_price": "Egységár"
+      },
       "product_variants": "Termékváltozatok",
       "quantity": {
         "label": "Mennyiség",
@@ -133,52 +177,17 @@
         "max_of": "Max. {{ quantity }}",
         "in_cart_aria_label": "Mennyiség ({{ quantity }} a kosárban)"
       },
-      "price": {
-        "from_price_html": "Legalacsonyabb ár: {{ price }}",
-        "regular_price": "Normál ár",
-        "sale_price": "Akciós ár",
-        "unit_price": "Egységár"
-      },
       "share": "A termék megosztása",
-      "sold_out": "Elfogyott",
-      "unavailable": "Nincs készleten",
-      "vendor": "Forgalmazó",
-      "video_exit_message": "{{ title }}: a teljes képernyős videó ugyanabban az ablakban nyílik meg.",
-      "xr_button": "Megtekintés a saját környezetben",
-      "xr_button_label": "Megtekintés a saját környezetben: kiterjesztettvalóság-alapú ablakban töltődik be az elem",
-      "pickup_availability": {
-        "view_store_info": "Webáruház adatai",
-        "check_other_stores": "Kapható más webáruházakban?",
-        "pick_up_available": "Személyesen átvehető",
-        "pick_up_available_at_html": "Személyesen átvehető itt: <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Személyesen egyelőre nem vehető át itt: <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Nem sikerült betölteni az átvehetőségi adatokat",
-        "refresh": "Frissítés"
-      },
-      "media": {
-        "open_media": "{{ index }}. médiafájl megnyitása a modális párbeszédpanelen",
-        "play_model": "Lejátszás a 3D-megjelenítőben",
-        "play_video": "Videó lejátszása",
-        "gallery_viewer": "Galériamegjelenítő",
-        "load_image": "{{ index }}. kép betöltése galérianézetben",
-        "load_model": "{{ index }}. térhatású modell betöltése galérianézetben",
-        "load_video": "{{ index }}. videó lejátszása galérianézetben",
-        "image_available": "{{ index }}. kép betöltve galérianézetben"
-      },
-      "nested_label": "{{ title }} – {{ parent_title }}",
-      "view_full_details": "Minden részlet megtekintése",
       "shipping_policy_html": "A <a href=\"{{ link }}\">szállítási költséget</a> a megrendeléskor számítjuk ki.",
-      "choose_options": "Válassz a lehetőségek közül",
-      "choose_product_options": "Termékváltozatok – {{ product_name }}",
+      "sku": "Termékváltozat",
+      "sold_out": "Elfogyott",
+      "taxes_included": "Tartalmazza az adókat.",
+      "unavailable": "Nincs készleten",
       "value_unavailable": "{{ option_value }} – Nincs készleten",
       "variant_sold_out_or_unavailable": "A változat elfogyott vagy nincs készleten",
-      "inventory_in_stock": "Raktáron",
-      "inventory_in_stock_show_count": "{{ quantity }} raktáron",
-      "inventory_low_stock": "Alacsony készlet",
-      "inventory_low_stock_show_count": "Alacsony készlet: csak {{ quantity }} van raktáron",
-      "inventory_out_of_stock": "Nincs készleten",
-      "inventory_out_of_stock_continue_selling": "Raktáron",
-      "sku": "Termékváltozat",
+      "vendor": "Forgalmazó",
+      "video_exit_message": "{{ title }}: a teljes képernyős videó ugyanabban az ablakban nyílik meg.",
+      "view_full_details": "Minden részlet megtekintése",
       "volume_pricing": {
         "title": "Mennyiségi árszabás",
         "note": "Mennyiségi árszabás rendelkezésre áll",
@@ -186,9 +195,8 @@
         "price_range": "{{ minimum }} – {{ maximum }}",
         "price_at_each_html": "{{ price }}/db"
       },
-      "taxes_included": "Tartalmazza az adókat.",
-      "duties_included": "Tartalmazza a vámokat.",
-      "duties_and_taxes_included": "Tartalmazza a vámokat és az adókat."
+      "xr_button": "Megtekintés a saját környezetben",
+      "xr_button_label": "Megtekintés a saját környezetben: kiterjesztettvalóság-alapú ablakban töltődik be az elem"
     },
     "modal": {
       "label": "Médiatár"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Nem találjuk az oldalt",
+      "subtext": "404-es hiba történt."
+    },
     "search": {
       "no_results": "Nincs találat erre: {{ terms }}. Ellenőrizd a helyesírást, vagy írj be egy másik szót vagy kifejezést.",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "Kérjük, helyesbítsd a következőket:",
         "title": "Kapcsolattartói űrlap"
       }
-    },
-    "404": {
-      "title": "Nem találjuk az oldalt",
-      "subtext": "404-es hiba történt."
     }
   },
   "sections": {

@@ -1,0 +1,60 @@
+{% comment %}
+  Item extra do menu para clientes com tag configurada (settings da seção Header).
+  Parâmetros repassados pelo header (render não herda assigns do pai):
+  - show_exclusive_menu_item, exclusive_collection, exclusive_nav_label
+  - variant: desktop | drawer
+
+  {% render 'customer-exclusive-nav-link', variant: 'desktop', show_exclusive_menu_item: show_exclusive_menu_item, exclusive_nav_label: exclusive_nav_label, exclusive_collection: exclusive_collection %}
+{% endcomment %}
+
+{% liquid
+  assign exclusive_coll = exclusive_collection
+  assign menu_label = exclusive_nav_label | strip
+  if exclusive_coll != blank and menu_label == blank
+    assign menu_label = exclusive_coll.title
+  endif
+
+  assign exclusive_link_active = false
+  if show_exclusive_menu_item and exclusive_coll != blank and menu_label != blank
+    if template.name == 'collection' and collection and exclusive_coll.handle == collection.handle
+      assign exclusive_link_active = true
+    endif
+  endif
+%}
+
+{% if show_exclusive_menu_item and exclusive_coll != blank and menu_label != blank %}
+  {% case variant %}
+    {% when 'desktop' %}
+      <li>
+        <a
+          id="HeaderMenu-customer-exclusive"
+          href="{{ exclusive_coll.url }}"
+          class="header__menu-item list-menu__item link link--text focus-inset"
+          {% if exclusive_link_active %}
+            aria-current="page"
+          {% endif %}
+        >
+          <span
+            {% if exclusive_link_active %}
+              class="header__active-menu-item"
+            {% endif %}
+          >
+            {{- menu_label | escape -}}
+          </span>
+        </a>
+      </li>
+    {% when 'drawer' %}
+      <li>
+        <a
+          id="HeaderDrawer-customer-exclusive"
+          href="{{ exclusive_coll.url }}"
+          class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if exclusive_link_active %} menu-drawer__menu-item--active{% endif %}"
+          {% if exclusive_link_active %}
+            aria-current="page"
+          {% endif %}
+        >
+          {{ menu_label | escape }}
+        </a>
+      </li>
+  {% endcase %}
+{% endif %}

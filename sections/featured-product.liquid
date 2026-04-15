@@ -120,8 +120,18 @@
                       placeholder: placeholder,
                       use_variant: true,
                       show_badges: true,
-                      price_class: 'price--large'
+                      price_class: 'price--large',
+                      defer_pix_price: true
                     -%}
+                    {%- liquid
+                      assign _pixp_fp = settings.pix_discount_percent | default: 0 | plus: 0
+                    -%}
+                    {%- if _pixp_fp > 0 and placeholder == false and product.quantity_price_breaks_configured? != true -%}
+                      {% render 'pix-price-display',
+                        price_cents: product.selected_or_first_available_variant.price,
+                        variant: product.selected_or_first_available_variant
+                      %}
+                    {%- endif -%}
                   </div>
                   {%- if product.quantity_price_breaks_configured? -%}
                     <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">

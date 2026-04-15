@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,52 @@
   "products": {
     "product": {
       "add_to_cart": "เพิ่มลงในตะกร้าสินค้า",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "เลือกตัวเลือก",
+      "choose_product_options": "เลือกตัวเลือกสำหรับ {{ product_name }}",
       "description": "คำอธิบาย",
+      "duties_and_taxes_included": "รวมภาษีและอากรแล้ว",
+      "duties_included": "รวมอากรแล้ว",
+      "inventory_in_stock": "มีในสต็อก",
+      "inventory_in_stock_show_count": "มี {{ quantity }} รายการในสต็อกสินค้า",
+      "inventory_low_stock": "สต็อกสินค้าเหลือน้อย",
+      "inventory_low_stock_show_count": "สต็อกสินค้าเหลือน้อย: เหลือ {{ quantity }} ชิ้น",
+      "inventory_out_of_stock": "หมดสต็อก",
+      "inventory_out_of_stock_continue_selling": "มีในสต็อก",
+      "media": {
+        "open_media": "เปิดสื่อ {{ index }} ในโมดอล",
+        "play_model": "เล่นตัวแสดง 3 มิติ",
+        "play_video": "เล่นวิดีโอ",
+        "gallery_viewer": "เครื่องมือดูภาพของแกลเลอรี",
+        "load_image": "โหลดรูปภาพ {{ index }} ในมุมมองแกลเลอรี",
+        "load_model": "โหลดโมเดล 3 มิติ {{ index }} ในมุมมองแกลเลอรี",
+        "load_video": "เล่นวิดีโอ {{ index }} ในมุมมองแกลเลอรี",
+        "image_available": "รูปภาพ {{ index }} พร้อมใช้งานในมุมมองแกลเลอรี"
+      },
+      "nested_label": "{{ title }} สำหรับ {{ parent_title }}",
       "on_sale": "ลดราคา",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "ดูข้อมูลร้านค้า",
+        "check_other_stores": "ตรวจสอบความพร้อมที่ร้านค้าอื่นๆ",
+        "pick_up_available": "การรับสินค้าด้วยตนเองพร้อมให้บริการ",
+        "pick_up_available_at_html": "รับสินค้าด้วยตนเองได้ที่ <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "การรับสินค้าด้วยตนเองที่ <span class=\"color-foreground\">{{ location_name }}</span> ยังไม่พร้อมให้บริการในขณะนี้",
+        "unavailable": "ไม่สามารถโหลดความพร้อมในการรับสินค้าด้วยตนเองได้",
+        "refresh": "รีเฟรช"
+      },
+      "price": {
+        "from_price_html": "จาก {{ price }}",
+        "regular_price": "ราคาปกติ",
+        "sale_price": "ราคาโปรโมชัน",
+        "unit_price": "ราคาต่อหน่วย"
+      },
+      "product_variants": "ตัวเลือกสินค้า",
       "quantity": {
         "label": "ปริมาณ",
         "input_label": "ปริมาณสำหรับ {{ product }}",
@@ -132,52 +177,17 @@
         "max_of": "สูงสุด {{ quantity }} รายการ",
         "in_cart_aria_label": "จำนวน ({{ quantity }} ชิ้นในตะกร้าสินค้า)"
       },
-      "price": {
-        "from_price_html": "จาก {{ price }}",
-        "regular_price": "ราคาปกติ",
-        "sale_price": "ราคาโปรโมชัน",
-        "unit_price": "ราคาต่อหน่วย"
-      },
       "share": "แชร์สินค้ารายการนี้",
-      "sold_out": "ขายหมดแล้ว",
-      "unavailable": "ไม่พร้อมใช้งาน",
-      "vendor": "เวนเดอร์",
-      "video_exit_message": "{{ title }} เปิดวิดีโอแบบเต็มหน้าจอในหน้าต่างเดียวกัน",
-      "xr_button": "ดูในพื้นที่ของคุณ",
-      "xr_button_label": "ดูในพื้นที่ของคุณ โหลดรายการในหน้าต่างความเป็นจริงเสริม",
-      "pickup_availability": {
-        "view_store_info": "ดูข้อมูลร้านค้า",
-        "check_other_stores": "ตรวจสอบความพร้อมที่ร้านค้าอื่นๆ",
-        "pick_up_available": "การรับสินค้าด้วยตนเองพร้อมให้บริการ",
-        "pick_up_available_at_html": "รับสินค้าด้วยตนเองได้ที่ <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "การรับสินค้าด้วยตนเองที่ <span class=\"color-foreground\">{{ location_name }}</span> ยังไม่พร้อมให้บริการในขณะนี้",
-        "unavailable": "ไม่สามารถโหลดความพร้อมในการรับสินค้าด้วยตนเองได้",
-        "refresh": "รีเฟรช"
-      },
-      "media": {
-        "open_media": "เปิดสื่อ {{ index }} ในโมดอล",
-        "play_model": "เล่นตัวแสดง 3 มิติ",
-        "play_video": "เล่นวิดีโอ",
-        "gallery_viewer": "เครื่องมือดูภาพของแกลเลอรี",
-        "load_image": "โหลดรูปภาพ {{ index }} ในมุมมองแกลเลอรี",
-        "load_model": "โหลดโมเดล 3 มิติ {{ index }} ในมุมมองแกลเลอรี",
-        "load_video": "เล่นวิดีโอ {{ index }} ในมุมมองแกลเลอรี",
-        "image_available": "รูปภาพ {{ index }} พร้อมใช้งานในมุมมองแกลเลอรี"
-      },
-      "nested_label": "{{ title }} สำหรับ {{ parent_title }}",
-      "view_full_details": "ดูรายละเอียดทั้งหมด",
       "shipping_policy_html": "<a href=\"{{ link }}\">ค่าจัดส่ง</a>ที่คำนวณในขั้นตอนการชำระเงิน",
-      "choose_options": "เลือกตัวเลือก",
-      "choose_product_options": "เลือกตัวเลือกสำหรับ {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "ขายหมดแล้ว",
+      "taxes_included": "รวมภาษีแล้ว",
+      "unavailable": "ไม่พร้อมใช้งาน",
       "value_unavailable": "{{ option_value }} ไม่พร้อมจำหน่าย",
       "variant_sold_out_or_unavailable": "ตัวเลือกสินค้าขายหมดแล้วหรือไม่พร้อมจำหน่าย",
-      "inventory_in_stock": "มีในสต็อก",
-      "inventory_in_stock_show_count": "มี {{ quantity }} รายการในสต็อกสินค้า",
-      "inventory_low_stock": "สต็อกสินค้าเหลือน้อย",
-      "inventory_low_stock_show_count": "สต็อกสินค้าเหลือน้อย: เหลือ {{ quantity }} ชิ้น",
-      "inventory_out_of_stock": "หมดสต็อก",
-      "sku": "SKU",
-      "inventory_out_of_stock_continue_selling": "มีในสต็อก",
+      "vendor": "เวนเดอร์",
+      "video_exit_message": "{{ title }} เปิดวิดีโอแบบเต็มหน้าจอในหน้าต่างเดียวกัน",
+      "view_full_details": "ดูรายละเอียดทั้งหมด",
       "volume_pricing": {
         "title": "การกำหนดราคาตามปริมาณ",
         "note": "การกำหนดราคาตามปริมาณพร้อมใช้งาน",
@@ -185,10 +195,8 @@
         "price_range": "{{ minimum }} - {{ maximum }}",
         "price_at_each_html": "ราคา {{ price }}/หน่วย"
       },
-      "product_variants": "ตัวเลือกสินค้า",
-      "taxes_included": "รวมภาษีแล้ว",
-      "duties_included": "รวมอากรแล้ว",
-      "duties_and_taxes_included": "รวมภาษีและอากรแล้ว"
+      "xr_button": "ดูในพื้นที่ของคุณ",
+      "xr_button_label": "ดูในพื้นที่ของคุณ โหลดรายการในหน้าต่างความเป็นจริงเสริม"
     },
     "modal": {
       "label": "แกลเลอรีสื่อ"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "ไม่พบหน้า",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "ไม่พบผลลัพธ์สำหรับ “{{ terms }}” ตรวจสอบการสะกดคำหรือลองค้นหาคำอื่น",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "โปรดแก้ไขข้อมูลดังต่อไปนี้:",
         "title": "แบบฟอร์มการติดต่อ"
       }
-    },
-    "404": {
-      "title": "ไม่พบหน้า",
-      "subtext": "404"
     }
   },
   "sections": {

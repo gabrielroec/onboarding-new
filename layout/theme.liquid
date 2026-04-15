@@ -276,8 +276,13 @@
       {{ 'free-shipping-progress.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
-    {%- if settings.show_merchant_installments -%}
+    {%- unless settings.show_merchant_installments == false -%}
       {{ 'installments-display.css' | asset_url | stylesheet_tag }}
+    {%- endunless -%}
+
+    {%- assign pix_pct_css = settings.pix_discount_percent | default: 0 | plus: 0 -%}
+    {%- if pix_pct_css > 0 -%}
+      {{ 'pix-price-display.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
     {%- unless settings.type_body_font.system? -%}
@@ -401,8 +406,8 @@
       <script src="{{ 'free-shipping-progress.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {%- if settings.show_merchant_installments -%}
+    {%- unless settings.show_merchant_installments == false -%}
       <script src="{{ 'installments-display.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {%- endunless -%}
   </body>
 </html>

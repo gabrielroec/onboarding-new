@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,52 @@
   "products": {
     "product": {
       "add_to_cart": "Læg i indkøbskurv",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Vælg muligheder",
+      "choose_product_options": "Vælg muligheder for {{ product_name }}",
       "description": "Beskrivelse",
+      "duties_and_taxes_included": "Inklusive told og skatter.",
+      "duties_included": "Inklusive told.",
+      "inventory_in_stock": "På lager",
+      "inventory_in_stock_show_count": "{{ quantity }} på lager",
+      "inventory_low_stock": "Lav lagerbeholdning",
+      "inventory_low_stock_show_count": "Lav lagerbeholdning: {{ quantity }} tilbage",
+      "inventory_out_of_stock": "Ikke på lager",
+      "inventory_out_of_stock_continue_selling": "På lager",
+      "media": {
+        "open_media": "Åbn mediet {{ index }} i modus",
+        "play_model": "Afspil 3D-fremviser",
+        "play_video": "Afspil video",
+        "gallery_viewer": "Fremviser til Galleri",
+        "load_image": "Indlæs billedet {{ index }} i gallerivisning",
+        "load_model": "Indlæs 3D-modellen {{ index }} i gallerivisning",
+        "load_video": "Afspil videoen {{ index }} i gallerivisning",
+        "image_available": "Billedet {{ index }} er nu tilgængeligt i gallerivisning"
+      },
+      "nested_label": "{{ title }} for {{ parent_title }}",
       "on_sale": "Udsalg",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Se butiksoplysninger",
+        "check_other_stores": "Kontrollér tilgængelighed i andre butikker",
+        "pick_up_available": "Afhentning er tilgængelig",
+        "pick_up_available_at_html": "Afhentning er tilgængelig på <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Afhentning er ikke tilgængelig på <span class=\"color-foreground\">{{ location_name }}</span> i øjeblikket",
+        "unavailable": "Tilgængelighed for afhentning kunne ikke indlæses",
+        "refresh": "Opdater"
+      },
+      "price": {
+        "from_price_html": "Fra {{ price }}",
+        "regular_price": "Normalpris",
+        "sale_price": "Udsalgspris",
+        "unit_price": "Stykpris"
+      },
+      "product_variants": "Produktvarianter",
       "quantity": {
         "label": "Antal",
         "input_label": "Antal for {{ product }}",
@@ -132,52 +177,17 @@
         "max_of": "Maks. {{ quantity }}",
         "in_cart_aria_label": "Antal ({{ quantity }} i indkøbskurv)"
       },
-      "price": {
-        "from_price_html": "Fra {{ price }}",
-        "regular_price": "Normalpris",
-        "sale_price": "Udsalgspris",
-        "unit_price": "Stykpris"
-      },
       "share": "Del dette produkt",
-      "sold_out": "Udsolgt",
-      "unavailable": "Ikke tilgængelig",
-      "vendor": "Forhandler",
-      "video_exit_message": "{{ title }} åbner video i fuld skærm i samme vindue.",
-      "xr_button": "Se den i dit område",
-      "xr_button_label": "Se den i dine omgivelser – indlæser vare i et augmented reality-vindue",
-      "pickup_availability": {
-        "view_store_info": "Se butiksoplysninger",
-        "check_other_stores": "Kontrollér tilgængelighed i andre butikker",
-        "pick_up_available": "Afhentning er tilgængelig",
-        "pick_up_available_at_html": "Afhentning er tilgængelig på <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Afhentning er ikke tilgængelig på <span class=\"color-foreground\">{{ location_name }}</span> i øjeblikket",
-        "unavailable": "Tilgængelighed for afhentning kunne ikke indlæses",
-        "refresh": "Opdater"
-      },
-      "media": {
-        "open_media": "Åbn mediet {{ index }} i modus",
-        "play_model": "Afspil 3D-fremviser",
-        "play_video": "Afspil video",
-        "gallery_viewer": "Fremviser til Galleri",
-        "load_image": "Indlæs billedet {{ index }} i gallerivisning",
-        "load_model": "Indlæs 3D-modellen {{ index }} i gallerivisning",
-        "load_video": "Afspil videoen {{ index }} i gallerivisning",
-        "image_available": "Billedet {{ index }} er nu tilgængeligt i gallerivisning"
-      },
-      "nested_label": "{{ title }} for {{ parent_title }}",
-      "view_full_details": "Se komplette oplysninger",
       "shipping_policy_html": "<a href=\"{{ link }}\">Levering</a> beregnes ved betaling.",
-      "choose_options": "Vælg muligheder",
-      "choose_product_options": "Vælg muligheder for {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "Udsolgt",
+      "taxes_included": "Inklusive skatter.",
+      "unavailable": "Ikke tilgængelig",
       "value_unavailable": "{{ option_value }} - Ikke tilgængelig",
       "variant_sold_out_or_unavailable": "Varianten er udsolgt eller utilgængelig",
-      "inventory_in_stock": "På lager",
-      "inventory_in_stock_show_count": "{{ quantity }} på lager",
-      "inventory_low_stock": "Lav lagerbeholdning",
-      "inventory_low_stock_show_count": "Lav lagerbeholdning: {{ quantity }} tilbage",
-      "inventory_out_of_stock": "Ikke på lager",
-      "inventory_out_of_stock_continue_selling": "På lager",
-      "sku": "SKU",
+      "vendor": "Forhandler",
+      "video_exit_message": "{{ title }} åbner video i fuld skærm i samme vindue.",
+      "view_full_details": "Se komplette oplysninger",
       "volume_pricing": {
         "title": "Mængderabat",
         "note": "Mængderabat tilgængelig",
@@ -185,10 +195,8 @@
         "price_range": "{{ minimum }} – {{ maximum }}",
         "price_at_each_html": "til {{ price }} pr. stk."
       },
-      "product_variants": "Produktvarianter",
-      "taxes_included": "Inklusive skatter.",
-      "duties_included": "Inklusive told.",
-      "duties_and_taxes_included": "Inklusive told og skatter."
+      "xr_button": "Se den i dit område",
+      "xr_button_label": "Se den i dine omgivelser – indlæser vare i et augmented reality-vindue"
     },
     "modal": {
       "label": "Mediegalleri"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Siden blev ikke fundet",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Der blev ikke fundet nogen resultater for “{{ terms }}”. Kontrollér stavemåden, eller brug et andet ord eller udtryk.",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "Juster følgende:",
         "title": "Kontaktformular"
       }
-    },
-    "404": {
-      "title": "Siden blev ikke fundet",
-      "subtext": "404"
     }
   },
   "sections": {

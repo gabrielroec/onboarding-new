@@ -8,6 +8,9 @@
   - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
   - price_class: {String} Adds a price class to the price element (optional)
   - show_compare_at_price: {Boolean} Renders the compare at price if the product matches the condition (optional)
+  - defer_installments: {Boolean} If true, não renderiza parcelas aqui (ex.: card-product renderiza à parte)
+  - defer_pix_price: {Boolean} If true, não renderiza PIX aqui (card-product renderiza à parte na vitrine)
+  - hide_pix_price: {Boolean} If true, não mostra linha de preço PIX
 
   Usage:
   {% render 'price', product: product %}
@@ -37,6 +40,11 @@
 
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  endif
+
+  assign show_merchant_inst = true
+  if settings.show_merchant_installments == false
+    assign show_merchant_inst = false
   endif
 -%}
 
@@ -112,23 +120,51 @@
         {% render 'unit-price', price: product.selected_or_first_available_variant.unit_price, measurement: product.selected_or_first_available_variant.unit_price_measurement %}
       {%- endif -%}
     </div>
-    {%- if settings.show_merchant_installments and product and placeholder == false -%}
-      {%- liquid
-        if use_variant
-          assign inst_variant = target
-        else
-          assign inst_variant = product.selected_or_first_available_variant
-        endif
-      -%}
-      {% render 'installments-display',
-        price_cents: price,
-        variant: inst_variant,
-        context: 'product'
-      %}
+    {%- if show_merchant_inst and product and placeholder == false -%}
+      {%- unless defer_installments -%}
+        {%- liquid
+          if use_variant
+            assign inst_variant = target
+          else
+            assign inst_variant = product.selected_or_first_available_variant
+          endif
+        -%}
+        {% render 'installments-display',
+          price_cents: price,
+          variant: inst_variant,
+          context: 'product'
+        %}
+      {%- endunless -%}
+    {%- endif -%}
+    {%- liquid
+      assign show_pix_line = true
+      if hide_pix_price
+        assign show_pix_line = false
+      endif
+      assign _pixp = settings.pix_discount_percent | default: 0 | plus: 0
+      if _pixp <= 0
+        assign show_pix_line = false
+      endif
+    -%}
+    {%- if show_pix_line and product and placeholder == false and product.quantity_price_breaks_configured? != true -%}
+      {%- unless defer_pix_price -%}
+        {%- liquid
+          if use_variant
+            assign pix_variant = target
+          else
+            assign pix_variant = product.selected_or_first_available_variant
+          endif
+        -%}
+        {% render 'pix-price-display', price_cents: price, variant: pix_variant %}
+      {%- endunless -%}
     {%- endif -%}
     {%- if show_badges -%}
       <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-        {{ 'products.product.on_sale' | t }}
+        {% render 'discount-percent-off-text',
+          compare_at_price: compare_at_price,
+          price: price,
+          available: available
+        %}
       </span>
 
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">

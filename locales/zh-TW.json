@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,51 @@
   "products": {
     "product": {
       "add_to_cart": "加入購物車",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "選擇選項",
+      "choose_product_options": "選擇 {{ product_name }} 的選項",
       "description": "說明",
+      "duties_and_taxes_included": "已包含關稅和稅額。",
+      "duties_included": "已包含關稅。",
+      "inventory_in_stock": "有庫存",
+      "inventory_in_stock_show_count": "有 {{ quantity }} 件庫存",
+      "inventory_low_stock": "庫存不足",
+      "inventory_low_stock_show_count": "庫存不足：剩餘 {{ quantity }} 件",
+      "inventory_out_of_stock": "無庫存",
+      "inventory_out_of_stock_continue_selling": "有庫存",
+      "media": {
+        "open_media": "在互動視窗中開啟多媒體檔案 {{ index }}",
+        "play_model": "播放 3D 檢視器",
+        "play_video": "播放影片",
+        "gallery_viewer": "圖庫檢視器",
+        "load_image": "在圖庫檢視畫面載入圖片 {{ index }}",
+        "load_model": "在圖庫檢視畫面載入 3D 模型 {{ index }}",
+        "load_video": "在圖庫檢視畫面播放影片 {{ index }}",
+        "image_available": "現在可在圖庫檢視畫面中查看圖片 {{ index }}"
+      },
+      "nested_label": "適用於 {{ parent_title }} 的 {{ title }}",
       "on_sale": "特價",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "檢視商店資訊",
+        "check_other_stores": "查看其他商店的供貨情況",
+        "pick_up_available": "可提供取貨服務",
+        "pick_up_available_at_html": "可提供 <span class=\"color-foreground\">{{ location_name }}</span> 的取貨服務",
+        "pick_up_unavailable_at_html": "目前無法提供 <span class=\"color-foreground\">{{ location_name }}</span> 的取貨服務",
+        "unavailable": "無法載入取貨服務供應情況",
+        "refresh": "重新整理"
+      },
+      "price": {
+        "from_price_html": "從 {{ price }} 起",
+        "regular_price": "定價",
+        "sale_price": "售價",
+        "unit_price": "單價"
+      },
       "product_variants": "產品子類",
       "quantity": {
         "label": "數量",
@@ -133,52 +177,17 @@
         "max_of": "最多 {{ quantity }} 個",
         "in_cart_aria_label": "數量 (購物車中有 {{ quantity }} 個)"
       },
-      "price": {
-        "from_price_html": "從 {{ price }} 起",
-        "regular_price": "定價",
-        "sale_price": "售價",
-        "unit_price": "單價"
-      },
       "share": "分享產品",
-      "sold_out": "售罄",
-      "unavailable": "無法供貨",
-      "vendor": "廠商",
-      "video_exit_message": "{{ title }} 在同一視窗開啟全螢幕影片。",
-      "xr_button": "在您的空間中檢視",
-      "xr_button_label": "在您的空間中檢視，可將商品載入擴增實境視窗",
-      "pickup_availability": {
-        "view_store_info": "檢視商店資訊",
-        "check_other_stores": "查看其他商店的供貨情況",
-        "pick_up_available": "可提供取貨服務",
-        "pick_up_available_at_html": "可提供 <span class=\"color-foreground\">{{ location_name }}</span> 的取貨服務",
-        "pick_up_unavailable_at_html": "目前無法提供 <span class=\"color-foreground\">{{ location_name }}</span> 的取貨服務",
-        "unavailable": "無法載入取貨服務供應情況",
-        "refresh": "重新整理"
-      },
-      "media": {
-        "open_media": "在互動視窗中開啟多媒體檔案 {{ index }}",
-        "play_model": "播放 3D 檢視器",
-        "play_video": "播放影片",
-        "gallery_viewer": "圖庫檢視器",
-        "load_image": "在圖庫檢視畫面載入圖片 {{ index }}",
-        "load_model": "在圖庫檢視畫面載入 3D 模型 {{ index }}",
-        "load_video": "在圖庫檢視畫面播放影片 {{ index }}",
-        "image_available": "現在可在圖庫檢視畫面中查看圖片 {{ index }}"
-      },
-      "nested_label": "適用於 {{ parent_title }} 的 {{ title }}",
-      "view_full_details": "查看完整資訊",
       "shipping_policy_html": "結帳時計算<a href=\"{{ link }}\">運費</a>。",
-      "choose_options": "選擇選項",
-      "choose_product_options": "選擇 {{ product_name }} 的選項",
+      "sku": "存貨單位 (SKU)",
+      "sold_out": "售罄",
+      "taxes_included": "已包含稅額。",
+      "unavailable": "無法供貨",
       "value_unavailable": "{{ option_value }} (無法供貨)",
       "variant_sold_out_or_unavailable": "子類已售罄或無法供貨",
-      "inventory_in_stock": "有庫存",
-      "inventory_in_stock_show_count": "有 {{ quantity }} 件庫存",
-      "inventory_low_stock": "庫存不足",
-      "inventory_low_stock_show_count": "庫存不足：剩餘 {{ quantity }} 件",
-      "inventory_out_of_stock": "無庫存",
-      "inventory_out_of_stock_continue_selling": "有庫存",
-      "sku": "存貨單位 (SKU)",
+      "vendor": "廠商",
+      "video_exit_message": "{{ title }} 在同一視窗開啟全螢幕影片。",
+      "view_full_details": "查看完整資訊",
       "volume_pricing": {
         "title": "批發價",
         "note": "提供批發價",
@@ -186,9 +195,8 @@
         "price_range": "{{ minimum }} - {{ maximum }}",
         "price_at_each_html": "{{ price }}/每項"
       },
-      "taxes_included": "已包含稅額。",
-      "duties_included": "已包含關稅。",
-      "duties_and_taxes_included": "已包含關稅和稅額。"
+      "xr_button": "在您的空間中檢視",
+      "xr_button_label": "在您的空間中檢視，可將商品載入擴增實境視窗"
     },
     "modal": {
       "label": "媒體庫"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "找不到頁面",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "找不到與「{{ terms }}」相符的結果。請檢查拼字或使用其他字詞。",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "請調整以下內容：",
         "title": "聯絡表單"
       }
-    },
-    "404": {
-      "title": "找不到頁面",
-      "subtext": "404"
     }
   },
   "sections": {

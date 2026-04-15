@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,51 @@
   "products": {
     "product": {
       "add_to_cart": "カートに追加する",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "オプションを選択",
+      "choose_product_options": "{{ product_name }}のオプションを選択する",
       "description": "商品説明",
+      "duties_and_taxes_included": "関税と税金が含まれます。",
+      "duties_included": "関税込。",
+      "inventory_in_stock": "在庫あり",
+      "inventory_in_stock_show_count": "{{ quantity }}個の在庫",
+      "inventory_low_stock": "低在庫",
+      "inventory_low_stock_show_count": "低在庫：残り{{ quantity }}個",
+      "inventory_out_of_stock": "在庫切れ",
+      "inventory_out_of_stock_continue_selling": "在庫あり",
+      "media": {
+        "open_media": "モーダルでメディア ({{ index }}) を開く",
+        "play_model": "3Dビューアーの再生",
+        "play_video": "ビデオを再生",
+        "gallery_viewer": "ギャラリービュー",
+        "load_image": "ギャラリービューに画像 ({{ index }}) を読み込む",
+        "load_model": "ギャラリービューに3次元モデル ({{ index }}) を読み込む",
+        "load_video": "ギャラリービューでビデオ ({{ index }}) を再生する",
+        "image_available": "ギャラリービューで画像 ({{ index }}) が利用できるようになりました"
+      },
+      "nested_label": "{{ parent_title }}向けの{{ title }}",
       "on_sale": "セール",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "ストア情報を表示する",
+        "check_other_stores": "別のストアでの出品状況を確認する",
+        "pick_up_available": "受取が可能です",
+        "pick_up_available_at_html": "<span class=\"color-foreground\">{{ location_name }}</span>での受取が可能です。",
+        "pick_up_unavailable_at_html": "<span class=\"color-foreground\">{{ location_name }}</span>での受取は現在できません。",
+        "unavailable": "受取状況を読み込めませんでした",
+        "refresh": "更新"
+      },
+      "price": {
+        "from_price_html": "{{ price }}から",
+        "regular_price": "通常価格",
+        "sale_price": "セール価格",
+        "unit_price": "単価"
+      },
       "product_variants": "商品バリエーション",
       "quantity": {
         "label": "数量",
@@ -133,52 +177,17 @@
         "max_of": "最大： {{ quantity }}",
         "in_cart_aria_label": "カート内の数量 ({{ quantity }}個)"
       },
-      "price": {
-        "from_price_html": "{{ price }}から",
-        "regular_price": "通常価格",
-        "sale_price": "セール価格",
-        "unit_price": "単価"
-      },
       "share": "この商品を共有する",
-      "sold_out": "売り切れ",
-      "unavailable": "利用できません",
-      "vendor": "販売元",
-      "video_exit_message": "{{ title }}は同じウィンドウの全画面表示ビデオで開きます。",
-      "xr_button": "スペースに表示する",
-      "xr_button_label": "スペースに表示し、拡張現実ウィンドウにアイテムを読み込む",
-      "pickup_availability": {
-        "view_store_info": "ストア情報を表示する",
-        "check_other_stores": "別のストアでの出品状況を確認する",
-        "pick_up_available": "受取が可能です",
-        "pick_up_available_at_html": "<span class=\"color-foreground\">{{ location_name }}</span>での受取が可能です。",
-        "pick_up_unavailable_at_html": "<span class=\"color-foreground\">{{ location_name }}</span>での受取は現在できません。",
-        "unavailable": "受取状況を読み込めませんでした",
-        "refresh": "更新"
-      },
-      "media": {
-        "open_media": "モーダルでメディア ({{ index }}) を開く",
-        "play_model": "3Dビューアーの再生",
-        "play_video": "ビデオを再生",
-        "gallery_viewer": "ギャラリービュー",
-        "load_image": "ギャラリービューに画像 ({{ index }}) を読み込む",
-        "load_model": "ギャラリービューに3次元モデル ({{ index }}) を読み込む",
-        "load_video": "ギャラリービューでビデオ ({{ index }}) を再生する",
-        "image_available": "ギャラリービューで画像 ({{ index }}) が利用できるようになりました"
-      },
-      "nested_label": "{{ parent_title }}向けの{{ title }}",
-      "view_full_details": "詳細を表示する",
       "shipping_policy_html": "<a href=\"{{ link }}\">配送料</a>はチェックアウト時に計算されます。",
-      "choose_options": "オプションを選択",
-      "choose_product_options": "{{ product_name }}のオプションを選択する",
+      "sku": "SKU",
+      "sold_out": "売り切れ",
+      "taxes_included": "税込。",
+      "unavailable": "利用できません",
       "value_unavailable": "{{ option_value }}は利用できません",
       "variant_sold_out_or_unavailable": "バリエーションは売り切れているか販売できません",
-      "inventory_in_stock": "在庫あり",
-      "inventory_in_stock_show_count": "{{ quantity }}個の在庫",
-      "inventory_low_stock": "低在庫",
-      "inventory_low_stock_show_count": "低在庫：残り{{ quantity }}個",
-      "inventory_out_of_stock": "在庫切れ",
-      "inventory_out_of_stock_continue_selling": "在庫あり",
-      "sku": "SKU",
+      "vendor": "販売元",
+      "video_exit_message": "{{ title }}は同じウィンドウの全画面表示ビデオで開きます。",
+      "view_full_details": "詳細を表示する",
       "volume_pricing": {
         "title": "量による価格",
         "note": "量による価格が利用可能",
@@ -186,9 +195,8 @@
         "price_range": "{{ minimum }}～{{ maximum }}",
         "price_at_each_html": "{{ price }}/ユニットで"
       },
-      "taxes_included": "税込。",
-      "duties_included": "関税込。",
-      "duties_and_taxes_included": "関税と税金が含まれます。"
+      "xr_button": "スペースに表示する",
+      "xr_button_label": "スペースに表示し、拡張現実ウィンドウにアイテムを読み込む"
     },
     "modal": {
       "label": "メディアギャラリー"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "ページが見つかりません",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "「{{ terms }}」に一致する結果は見つかりませんでした。スペルを確認するか、別の単語やフレーズを使用してください。",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "以下を確認してください。",
         "title": "お問い合わせフォーム"
       }
-    },
-    "404": {
-      "title": "ページが見つかりません",
-      "subtext": "404"
     }
   },
   "sections": {

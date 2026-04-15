@@ -1,0 +1,51 @@
+{% comment %}
+  Etiquetas do metafield custom.custom_label (lista de metaobjects custom_label).
+  Espera que exista pelo menos um título não vazio (validado no card-product).
+  Parâmetros: card_product, section_id, badge_id_prefix
+  Cores: objeto Color da Shopify usa .rgb como "r g b" — aplicar como rgb(r g b), não só o valor cru.
+{% endcomment %}
+{% liquid
+  assign rendered = 0
+  assign labels = card_product.metafields.custom.custom_label.value
+%}
+{% for label in labels %}
+  {% assign t = label.title.value | default: label.title | strip %}
+  {% if t != blank %}
+    {% assign rendered = rendered | plus: 1 %}
+    {% if rendered <= 2 %}
+      {% liquid
+        assign bg = label.background_color.value | default: label.background_color
+        assign fg = label.text_color.value | default: label.text_color
+        assign bg_css = 'rgb(51 51 51)'
+        assign fg_css = 'rgb(255 255 255)'
+        if bg != blank
+          if bg.rgb != blank
+            assign bg_css = 'rgb(' | append: bg.rgb | append: ')'
+          else
+            assign bg_css = bg | append: ''
+          endif
+        endif
+        if fg != blank
+          if fg.rgb != blank
+            assign fg_css = 'rgb(' | append: fg.rgb | append: ')'
+          else
+            assign fg_css = fg | append: ''
+          endif
+        endif
+      %}
+      {% liquid
+        assign badge_id = badge_id_prefix | append: '-' | append: section_id | append: '-' | append: card_product.id
+        if rendered > 1
+          assign badge_id = badge_id | append: '-' | append: rendered
+        endif
+      %}
+      <span
+        id="{{ badge_id }}"
+        class="badge badge--bottom-left card-product-custom-label"
+        style="background-color: {{ bg_css }}; color: {{ fg_css }};"
+      >
+        {{- t | escape -}}
+      </span>
+    {% endif %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,13 @@
+{% comment %}
+  Texto da badge de desconto (ex.: "25% OFF"). Vazio se não houver promoção real ou produto indisponível.
+  Parâmetros: compare_at_price, price, available (boolean)
+{% endcomment %}
+{% liquid
+  assign pct = 0
+  if available and compare_at_price > price and compare_at_price > 0
+    assign pct = compare_at_price | minus: price | times: 100 | divided_by: compare_at_price | round
+  endif
+%}
+{% if pct > 0 %}
+  {{- 'products.product.percent_off' | t: percent: pct -}}
+{% endif %}

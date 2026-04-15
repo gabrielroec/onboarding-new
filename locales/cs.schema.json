@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "settings_schema": {
     "colors": {
@@ -270,6 +271,26 @@
             "label": "Kolekce",
             "info": "Zobrazí se v případě, že výsuvný košík je prázdný"
           }
+        }
+      }
+    },
+    "customer_exclusive_menu": {
+      "name": "Exclusive collection menu (customer tag)",
+      "settings": {
+        "paragraph": {
+          "content": "Show an extra main menu link to a collection for logged-in customers who have a specific tag. Does not block the collection URL—anyone with the link can open it."
+        },
+        "customer_tag": {
+          "label": "Customer tag",
+          "info": "Comparison is case-insensitive. Example: employee"
+        },
+        "collection": {
+          "label": "Collection",
+          "info": "Collection opened when customers click the menu item."
+        },
+        "menu_label": {
+          "label": "Menu label",
+          "default": "Exclusive"
         }
       }
     },
@@ -830,6 +851,29 @@
       },
       "presets": {
         "name": "Propagovaná kolekce"
+      }
+    },
+    "article-related-products": {
+      "name": "Related products (blog)",
+      "settings": {
+        "paragraph_metafield": {
+          "content": "Products are loaded from the blog post metafield custom.related_products (list of product references, max 4). Create it under Settings > Custom data > Blog posts."
+        },
+        "title": {
+          "label": "Heading",
+          "default": "Related products"
+        },
+        "swipe_on_mobile": {
+          "label": "Carousel on mobile",
+          "info": "When there are more products than fit in one row, shows a horizontal carousel on small screens."
+        },
+        "enable_desktop_slider": {
+          "label": "Carousel on desktop",
+          "info": "When there are more products than fit in one row, shows a horizontal carousel on large screens."
+        }
+      },
+      "presets": {
+        "name": "Related products (blog)"
       }
     },
     "footer": {
@@ -1678,6 +1722,15 @@
             "show_gift_card_recipient": {
               "label": " Možnosti zasílání dárkových karet",
               "info": "Zákazníci mohou přidat osobní zprávu a naplánovat datum odeslání. [Zjistit více](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            }
+          }
+        },
+        "buy_together": {
+          "name": "Buy together",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Complete the look"
             }
           }
         },

@@ -1,0 +1,36 @@
+{% comment %}
+  Preço do card + parcelamento + PIX informativos. Parcelas e PIX ficam aqui para aparecer na vitrine
+  mesmo que o `price.liquid` na CDN esteja desatualizado.
+  @param card_product {Product}
+  @param price_class {String} optional
+  @param show_compare_at_price {Boolean} optional, default true
+{% endcomment %}
+{%- liquid
+  assign _show_cmp = show_compare_at_price
+  if _show_cmp == nil
+    assign _show_cmp = true
+  endif
+-%}
+{% render 'price',
+  product: card_product,
+  price_class: price_class | default: '',
+  show_compare_at_price: _show_cmp,
+  defer_installments: true,
+  defer_pix_price: true
+%}
+{%- unless settings.show_merchant_installments == false -%}
+  {% render 'installments-display',
+    price_cents: card_product.selected_or_first_available_variant.price,
+    variant: card_product.selected_or_first_available_variant,
+    context: 'product'
+  %}
+{%- endunless -%}
+{%- liquid
+  assign _pix_pct = settings.pix_discount_percent | default: 0 | plus: 0
+-%}
+{%- if _pix_pct > 0 and card_product.quantity_price_breaks_configured? != true -%}
+  {% render 'pix-price-display',
+    price_cents: card_product.selected_or_first_available_variant.price,
+    variant: card_product.selected_or_first_available_variant
+  %}
+{%- endif -%}

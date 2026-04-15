@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -118,15 +119,52 @@
   "products": {
     "product": {
       "add_to_cart": "Добавить в корзину",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Выберите варианты",
+      "choose_product_options": "Выберите варианты для {{ product_name }}",
       "description": "Описание",
+      "duties_and_taxes_included": "Пошлины и налоги включены.",
+      "duties_included": "Пошлины включены.",
+      "inventory_in_stock": "В наличии",
+      "inventory_in_stock_show_count": "В наличии: {{ quantity }}",
+      "inventory_low_stock": "Заканчивается",
+      "inventory_low_stock_show_count": "Заканчивается. Осталось: {{ quantity }}",
+      "inventory_out_of_stock": "Нет в наличии",
+      "inventory_out_of_stock_continue_selling": "В наличии",
+      "media": {
+        "open_media": "Открыть медиа-файлы {{ index }} в модальном окне",
+        "play_model": "Открыть объемную модель",
+        "play_video": "Воспроизвести видео",
+        "gallery_viewer": "Средство просмотра галереи",
+        "load_image": "Загрузить изображение {{ index }} в средство просмотра галереи",
+        "load_model": "Загрузить трехмерную модель {{ index }} в средство просмотра галереи",
+        "load_video": "Загрузить видео {{ index }} в средство просмотра галереи",
+        "image_available": "Изображение {{ index }} доступно в средстве просмотра галереи"
+      },
+      "nested_label": "{{ title }} для товара \"{{ parent_title }}\"",
       "on_sale": "Распродажа",
-      "share": "Поделиться этим продуктом",
-      "sold_out": "Продано",
-      "unavailable": "Недоступно",
-      "vendor": "Продавец",
-      "video_exit_message": "{{ title }} – в том же окне открывается полноэкранное видео.",
-      "xr_button": "Просматривайте в реальных условиях",
-      "xr_button_label": "При просмотре в реальных условиях элемент загружается в окне дополненной реальности",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Сведения о магазине",
+        "check_other_stores": "Проверить наличие в других магазинах",
+        "pick_up_available": "Самовывоз доступен",
+        "pick_up_available_at_html": "Самовывоз доступен: <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Самовывоз сейчас недоступен: <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Не удалось загрузить сведения о доступности самовывоза",
+        "refresh": "Обновить"
+      },
+      "price": {
+        "from_price_html": "От {{ price }}",
+        "regular_price": "Обычная цена",
+        "sale_price": "Цена со скидкой",
+        "unit_price": "Цена за единицу"
+      },
+      "product_variants": "Варианты товара",
       "quantity": {
         "label": "Количество",
         "input_label": "Количество: {{ product }}",
@@ -141,45 +179,17 @@
         "max_of": "Макс. {{ quantity }}",
         "in_cart_aria_label": "Количество ({{ quantity }} в корзине)"
       },
-      "price": {
-        "from_price_html": "От {{ price }}",
-        "regular_price": "Обычная цена",
-        "sale_price": "Цена со скидкой",
-        "unit_price": "Цена за единицу"
-      },
-      "pickup_availability": {
-        "view_store_info": "Сведения о магазине",
-        "check_other_stores": "Проверить наличие в других магазинах",
-        "pick_up_available": "Самовывоз доступен",
-        "pick_up_available_at_html": "Самовывоз доступен: <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Самовывоз сейчас недоступен: <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Не удалось загрузить сведения о доступности самовывоза",
-        "refresh": "Обновить"
-      },
-      "media": {
-        "open_media": "Открыть медиа-файлы {{ index }} в модальном окне",
-        "play_model": "Открыть объемную модель",
-        "play_video": "Воспроизвести видео",
-        "gallery_viewer": "Средство просмотра галереи",
-        "load_image": "Загрузить изображение {{ index }} в средство просмотра галереи",
-        "load_model": "Загрузить трехмерную модель {{ index }} в средство просмотра галереи",
-        "load_video": "Загрузить видео {{ index }} в средство просмотра галереи",
-        "image_available": "Изображение {{ index }} доступно в средстве просмотра галереи"
-      },
-      "nested_label": "{{ title }} для товара \"{{ parent_title }}\"",
-      "view_full_details": "Просмотреть всю информацию",
+      "share": "Поделиться этим продуктом",
       "shipping_policy_html": "<a href=\"{{ link }}\">Стоимость доставки</a> рассчитывается при оформлении заказа.",
-      "choose_options": "Выберите варианты",
-      "choose_product_options": "Выберите варианты для {{ product_name }}",
+      "sku": "Артикул",
+      "sold_out": "Продано",
+      "taxes_included": "Налоги включены.",
+      "unavailable": "Недоступно",
       "value_unavailable": "{{ option_value }} — Недоступно",
       "variant_sold_out_or_unavailable": "Вариант распродан или недоступен",
-      "inventory_in_stock": "В наличии",
-      "inventory_in_stock_show_count": "В наличии: {{ quantity }}",
-      "inventory_low_stock": "Заканчивается",
-      "inventory_low_stock_show_count": "Заканчивается. Осталось: {{ quantity }}",
-      "inventory_out_of_stock": "Нет в наличии",
-      "inventory_out_of_stock_continue_selling": "В наличии",
-      "sku": "Артикул",
+      "vendor": "Продавец",
+      "video_exit_message": "{{ title }} – в том же окне открывается полноэкранное видео.",
+      "view_full_details": "Просмотреть всю информацию",
       "volume_pricing": {
         "title": "Оптовая цена",
         "note": "Доступны оптовые цены",
@@ -187,10 +197,8 @@
         "price_range": "{{ minimum }} — {{ maximum }}",
         "price_at_each_html": "по цене {{ price }} за штуку"
       },
-      "product_variants": "Варианты товара",
-      "taxes_included": "Налоги включены.",
-      "duties_included": "Пошлины включены.",
-      "duties_and_taxes_included": "Пошлины и налоги включены."
+      "xr_button": "Просматривайте в реальных условиях",
+      "xr_button_label": "При просмотре в реальных условиях элемент загружается в окне дополненной реальности"
     },
     "modal": {
       "label": "Галерея мультимедиа"
@@ -234,6 +242,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Страница не найдена",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "По запросу «{{ terms }}» ничего не найдено. Проверьте правописание или выберите другие слова либо фразу.",
       "title": "Результаты поиска",
@@ -287,10 +299,6 @@
         "error_heading": "Измените следующие элементы:",
         "title": "Форма для связи"
       }
-    },
-    "404": {
-      "title": "Страница не найдена",
-      "subtext": "404"
     }
   },
   "sections": {

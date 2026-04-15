@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,51 @@
   "products": {
     "product": {
       "add_to_cart": "카트에 추가",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "옵션 선택하기",
+      "choose_product_options": "{{ product_name }}의 옵션 선택",
       "description": "설명",
+      "duties_and_taxes_included": "관세 및 세금이 포함된 가격입니다.",
+      "duties_included": "관세가 포함된 가격입니다.",
+      "inventory_in_stock": "재고 있음",
+      "inventory_in_stock_show_count": "재고 {{ quantity }}개",
+      "inventory_low_stock": "재고 부족",
+      "inventory_low_stock_show_count": "재고 부족: {{ quantity }}개 남음",
+      "inventory_out_of_stock": "품절",
+      "inventory_out_of_stock_continue_selling": "재고 있음",
+      "media": {
+        "open_media": "모달에서 미디어 {{ index }} 열기",
+        "play_model": "3D 뷰어 재생",
+        "play_video": "동영상 재생",
+        "gallery_viewer": "갤러리 뷰어",
+        "load_image": "갤러리 뷰에서 이미지 {{ index }} 로드",
+        "load_model": "갤러리 뷰에서 3D 모델 {{ index }} 로드",
+        "load_video": "갤러리 뷰에서 동영상 {{ index }} 재생",
+        "image_available": "이제 갤러리 뷰에서 이미지 {{ index }} 사용 가능"
+      },
+      "nested_label": "{{ parent_title }}용 {{ title }}",
       "on_sale": "할인",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "스토어 정보 보기",
+        "check_other_stores": "다른 스토어의 사용 가능 여부 확인",
+        "pick_up_available": "픽업 사용 가능",
+        "pick_up_available_at_html": "<span class=\"color-foreground\">{{ location_name }}</span>에서 픽업 사용 가능",
+        "pick_up_unavailable_at_html": "<span class=\"color-foreground\">{{ location_name }}</span>에서 현재 픽업 사용 불가",
+        "unavailable": "픽업 사용 가능 여부를 로드할 수 없습니다.",
+        "refresh": "새로 고침"
+      },
+      "price": {
+        "from_price_html": "{{ price }}에서",
+        "regular_price": "정가",
+        "sale_price": "할인가",
+        "unit_price": "단가"
+      },
       "product_variants": "제품 이형 상품",
       "quantity": {
         "label": "수량",
@@ -133,52 +177,17 @@
         "max_of": "최대 {{ quantity }}개",
         "in_cart_aria_label": "수량(카트에 {{ quantity }}개)"
       },
-      "price": {
-        "from_price_html": "{{ price }}에서",
-        "regular_price": "정가",
-        "sale_price": "할인가",
-        "unit_price": "단가"
-      },
       "share": "이 제품 공유",
-      "sold_out": "품절",
-      "unavailable": "사용할 수 없음",
-      "vendor": "공급업체",
-      "video_exit_message": "{{ title }}이(가) 동일한 창에서 전체 화면으로 열립니다.",
-      "xr_button": "사용자 공간에서 보기",
-      "xr_button_label": "사용자 공간에서 보기, 증강 현실 창에서 품목 로드",
-      "pickup_availability": {
-        "view_store_info": "스토어 정보 보기",
-        "check_other_stores": "다른 스토어의 사용 가능 여부 확인",
-        "pick_up_available": "픽업 사용 가능",
-        "pick_up_available_at_html": "<span class=\"color-foreground\">{{ location_name }}</span>에서 픽업 사용 가능",
-        "pick_up_unavailable_at_html": "<span class=\"color-foreground\">{{ location_name }}</span>에서 현재 픽업 사용 불가",
-        "unavailable": "픽업 사용 가능 여부를 로드할 수 없습니다.",
-        "refresh": "새로 고침"
-      },
-      "media": {
-        "open_media": "모달에서 미디어 {{ index }} 열기",
-        "play_model": "3D 뷰어 재생",
-        "play_video": "동영상 재생",
-        "gallery_viewer": "갤러리 뷰어",
-        "load_image": "갤러리 뷰에서 이미지 {{ index }} 로드",
-        "load_model": "갤러리 뷰에서 3D 모델 {{ index }} 로드",
-        "load_video": "갤러리 뷰에서 동영상 {{ index }} 재생",
-        "image_available": "이제 갤러리 뷰에서 이미지 {{ index }} 사용 가능"
-      },
-      "nested_label": "{{ parent_title }}용 {{ title }}",
-      "view_full_details": "전체 세부 정보 보기",
       "shipping_policy_html": "<a href=\"{{ link }}\">배송료</a>는 결제 시 계산됩니다.",
-      "choose_options": "옵션 선택하기",
-      "choose_product_options": "{{ product_name }}의 옵션 선택",
+      "sku": "SKU(재고 관리 코드)",
+      "sold_out": "품절",
+      "taxes_included": "세금이 포함된 가격입니다.",
+      "unavailable": "사용할 수 없음",
       "value_unavailable": "{{ option_value }} - 사용할 수 없음",
       "variant_sold_out_or_unavailable": "품절이거나 구매할 수 없는 이형 상품",
-      "inventory_in_stock": "재고 있음",
-      "inventory_in_stock_show_count": "재고 {{ quantity }}개",
-      "inventory_low_stock": "재고 부족",
-      "inventory_low_stock_show_count": "재고 부족: {{ quantity }}개 남음",
-      "inventory_out_of_stock": "품절",
-      "inventory_out_of_stock_continue_selling": "재고 있음",
-      "sku": "SKU(재고 관리 코드)",
+      "vendor": "공급업체",
+      "video_exit_message": "{{ title }}이(가) 동일한 창에서 전체 화면으로 열립니다.",
+      "view_full_details": "전체 세부 정보 보기",
       "volume_pricing": {
         "title": "수량별 가격 책정",
         "note": "수량별 가격 책정 사용 가능",
@@ -186,9 +195,8 @@
         "price_range": "{{ minimum }} ~ {{ maximum }}",
         "price_at_each_html": "개당 {{ price }}"
       },
-      "taxes_included": "세금이 포함된 가격입니다.",
-      "duties_included": "관세가 포함된 가격입니다.",
-      "duties_and_taxes_included": "관세 및 세금이 포함된 가격입니다."
+      "xr_button": "사용자 공간에서 보기",
+      "xr_button_label": "사용자 공간에서 보기, 증강 현실 창에서 품목 로드"
     },
     "modal": {
       "label": "미디어 갤러리"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "페이지를 찾을 수 없음",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "\"{{ terms }}\"에 대한 검색 결과가 없습니다. 철자를 확인하거나 다른 단어/문구를 사용해 보십시오.",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "다음을 조정하십시오.",
         "title": "연락처 양식"
       }
-    },
-    "404": {
-      "title": "페이지를 찾을 수 없음",
-      "subtext": "404"
     }
   },
   "sections": {

@@ -69,6 +69,10 @@
   display: inline-block;
 }
 
+.price--sold-out .price__badge-sale {
+  display: none;
+}
+
 .volume-pricing--sale-badge .price__badge-sale {
   margin-left: 0.5rem;
 }

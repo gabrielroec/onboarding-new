@@ -67,11 +67,11 @@
                   <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
                 </div>
 
-                {%- if settings.show_merchant_installments -%}
+                {%- unless settings.show_merchant_installments == false -%}
                   <div class="totals__installments-wrap">
                     {% render 'installments-display', price_cents: cart.total_price, context: 'cart' %}
                   </div>
-                {%- endif -%}
+                {%- endunless -%}
 
                 <small class="tax-note caption-large rte">
                   {%- if cart.duties_included and cart.taxes_included -%}

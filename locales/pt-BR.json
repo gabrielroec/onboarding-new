@@ -116,9 +116,16 @@
   },
   "products": {
     "product": {
+      "buy_together": {
+        "heading": "Leve junto",
+        "button": "Adicionar os 2 itens ao carrinho",
+        "adding": "Adicionando…",
+        "error": "Não foi possível adicionar. Tente novamente."
+      },
       "add_to_cart": "Adicionar ao carrinho",
       "description": "Descrição",
       "on_sale": "Promoção",
+      "percent_off": "{{ percent }}% OFF",
       "quantity": {
         "label": "Quantidade",
         "input_label": "Quantidade de {{ product }}",
@@ -544,7 +551,11 @@
   "content": {
     "installments_display_text": "Em até {{ count }}x de {{ amount }} sem juros",
     "installments_display_template_js": "Em até [count]x de [amount] sem juros",
-    "installments_display_disclaimer": "Informação meramente indicativa. Sujeito à aprovação da operadora do cartão."
+    "installments_display_disclaimer": "Informação meramente indicativa. Sujeito à aprovação da operadora do cartão.",
+    "video_with_text_editor_empty": "Adicione um vídeo hospedado na Shopify ou um URL válido do YouTube/Vimeo. Esta área só aparece no editor do tema.",
+    "video_with_text_editor_invalid_url": "Este URL não é um vídeo reconhecido do YouTube ou Vimeo.",
+    "video_with_text_storefront_placeholder": "Vídeo",
+    "pix_price_line": "{{ amount }} no PIX (economia de {{ percent }}%)"
   },
   "recipient": {
     "form": {

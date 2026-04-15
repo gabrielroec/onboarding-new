@@ -1,0 +1,159 @@
+/* Compre junto — PDP (Dawn): cartão compacto e limpo */
+.product-buy-together {
+  --pbt-radius: min(var(--border-radius, 0), 0.8rem);
+  margin-top: 1.75rem;
+  padding: 0;
+  border: none;
+  border-radius: var(--pbt-radius);
+  background: rgb(var(--color-background));
+  box-shadow: 0 0 0 1px rgba(var(--color-foreground), 0.08);
+}
+
+.product-buy-together__inner {
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+@media screen and (min-width: 750px) {
+  .product-buy-together__inner {
+    padding: 1.5rem 1.5rem 1.25rem;
+  }
+}
+
+.product-buy-together__heading {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.product-buy-together__row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.product-buy-together__media {
+  flex: 0 0 5.6rem;
+  width: 5.6rem;
+  max-width: 5.6rem;
+  border-radius: var(--pbt-radius);
+  overflow: hidden;
+  background: rgba(var(--color-foreground), 0.04);
+  aspect-ratio: 1;
+}
+
+.product-buy-together__media img,
+.product-buy-together__media .placeholder-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  vertical-align: middle;
+}
+
+.product-buy-together__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.product-buy-together__title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: calc(1 + 0.35 / var(--font-body-scale));
+  font-weight: 500;
+}
+
+.product-buy-together__title a {
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-buy-together__title a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+/* Preço compacto (fora do componente price global para evitar layout “pesado”) */
+.product-buy-together__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+.product-buy-together__price-current {
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+.product-buy-together__price-row--sale .product-buy-together__price-current {
+  color: rgba(var(--color-foreground), 0.85);
+}
+
+.product-buy-together__price-compare {
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.55);
+}
+
+.product-buy-together__price-compare s {
+  text-decoration-thickness: 1px;
+}
+
+.product-buy-together__actions {
+  margin-top: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  border-top: 1px solid rgba(var(--color-foreground), 0.08);
+}
+
+@media screen and (min-width: 750px) {
+  .product-buy-together__actions {
+    padding: 1.1rem 1.5rem 1.5rem;
+  }
+}
+
+.product-buy-together__submit {
+  position: relative;
+  min-height: 4.4rem;
+}
+
+.product-buy-together__submit .loading__spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-buy-together__error {
+  margin: 0;
+  padding: 0 1.25rem 1rem;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: rgba(var(--color-foreground), 0.85);
+}
+
+@media screen and (min-width: 750px) {
+  .product-buy-together__error {
+    padding: 0 1.5rem 1.25rem;
+  }
+}
+
+.product-buy-together__error[hidden] {
+  display: none !important;
+}
+
+.product-buy-together__error:not([hidden]) {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(var(--color-foreground), 0.06);
+}

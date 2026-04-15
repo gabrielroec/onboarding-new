@@ -115,6 +115,12 @@
   },
   "products": {
     "product": {
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
       "add_to_cart": "Add to cart",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
@@ -127,6 +133,7 @@
       "inventory_out_of_stock_continue_selling": "In stock",
       "sku": "SKU",
       "on_sale": "Sale",
+      "percent_off": "{{ percent }}% OFF",
       "product_variants": "Product variants",
       "media": {
         "gallery_viewer": "Gallery Viewer",
@@ -533,7 +540,11 @@
   "content": {
     "installments_display_text": "Up to {{ count }} payments of {{ amount }}, interest-free",
     "installments_display_template_js": "Up to [count] payments of [amount], interest-free",
-    "installments_display_disclaimer": "For information only. Subject to approval by your card issuer."
+    "installments_display_disclaimer": "For information only. Subject to approval by your card issuer.",
+    "video_with_text_editor_empty": "Add a Shopify-hosted video or a valid YouTube/Vimeo URL. This preview only appears in the theme editor.",
+    "video_with_text_editor_invalid_url": "This URL is not a recognized YouTube or Vimeo video.",
+    "video_with_text_storefront_placeholder": "Video",
+    "pix_price_line": "{{ amount }} with PIX (save {{ percent }}%)"
   },
   "recipient": {
     "form": {

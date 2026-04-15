@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -117,16 +118,52 @@
   "products": {
     "product": {
       "add_to_cart": "Adăugați în coș",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Alege opțiunile",
+      "choose_product_options": "Alege opțiunile pentru {{ product_name }}",
       "description": "Descriere",
+      "duties_and_taxes_included": "Taxe și taxe vamale incluse.",
+      "duties_included": "Taxe vamale incluse.",
+      "inventory_in_stock": "În stoc",
+      "inventory_in_stock_show_count": "{{ quantity }} în stoc",
+      "inventory_low_stock": "Stoc redus",
+      "inventory_low_stock_show_count": "Stoc redus: doar {{ quantity }} articole rămase",
+      "inventory_out_of_stock": "Nu există în stoc",
+      "inventory_out_of_stock_continue_selling": "În stoc",
+      "media": {
+        "open_media": "Deschide conținutul media {{ index }} într-o fereastră modală",
+        "play_model": "Redați în vizualizatorul 3D",
+        "play_video": "Redați videoclipul",
+        "gallery_viewer": "Vizualizatorul galeriei",
+        "load_image": "Încarcă imaginea {{ index }} în vizualizarea galeriei",
+        "load_model": "Încarcă modelul 3D {{ index }} în vizualizarea galeriei",
+        "load_video": "Redă videoclipul {{ index }} în vizualizarea galeriei",
+        "image_available": "Imaginea {{ index }} este disponibilă acum în vizualizarea galeriei"
+      },
+      "nested_label": "{{ title }} pentru {{ parent_title }}",
       "on_sale": "Vânzare",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Vizualizați informațiile despre magazin",
+        "check_other_stores": "Vizualizați disponibilitatea la alte magazine",
+        "pick_up_available": "Ridicare disponibilă",
+        "pick_up_available_at_html": "Ridicare disponibilă la <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Ridicare indisponibilă momentan la <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Nu am putut încărca disponibilitatea pentru ridicare",
+        "refresh": "Reîmprospătați"
+      },
+      "price": {
+        "from_price_html": "Începând cu {{ price }}",
+        "regular_price": "Preț obișnuit",
+        "sale_price": "Preț redus",
+        "unit_price": "Preț unitar"
+      },
       "product_variants": "Variante de produse",
-      "share": "Distribuiți acest produs",
-      "sold_out": "Stoc epuizat",
-      "unavailable": "Indisponibil",
-      "vendor": "Vânzător",
-      "video_exit_message": "{{ title }} deschide videoclipul în ecran complet în aceeași fereastră.",
-      "xr_button": "Vizualizați în spațiul dvs.",
-      "xr_button_label": "Vizualizați în spațiul dvs., articolul se încarcă în fereastra de realitate augmentată",
       "quantity": {
         "label": "Cantitate",
         "input_label": "Cantitate pentru {{ product }}",
@@ -141,45 +178,17 @@
         "max_of": "Maximum {{ quantity }}",
         "in_cart_aria_label": "Cantitate ({{ quantity }} în coș)"
       },
-      "price": {
-        "from_price_html": "Începând cu {{ price }}",
-        "regular_price": "Preț obișnuit",
-        "sale_price": "Preț redus",
-        "unit_price": "Preț unitar"
-      },
-      "pickup_availability": {
-        "view_store_info": "Vizualizați informațiile despre magazin",
-        "check_other_stores": "Vizualizați disponibilitatea la alte magazine",
-        "pick_up_available": "Ridicare disponibilă",
-        "pick_up_available_at_html": "Ridicare disponibilă la <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Ridicare indisponibilă momentan la <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Nu am putut încărca disponibilitatea pentru ridicare",
-        "refresh": "Reîmprospătați"
-      },
-      "media": {
-        "open_media": "Deschide conținutul media {{ index }} într-o fereastră modală",
-        "play_model": "Redați în vizualizatorul 3D",
-        "play_video": "Redați videoclipul",
-        "gallery_viewer": "Vizualizatorul galeriei",
-        "load_image": "Încarcă imaginea {{ index }} în vizualizarea galeriei",
-        "load_model": "Încarcă modelul 3D {{ index }} în vizualizarea galeriei",
-        "load_video": "Redă videoclipul {{ index }} în vizualizarea galeriei",
-        "image_available": "Imaginea {{ index }} este disponibilă acum în vizualizarea galeriei"
-      },
-      "nested_label": "{{ title }} pentru {{ parent_title }}",
-      "view_full_details": "Vedeți detaliile complete",
+      "share": "Distribuiți acest produs",
       "shipping_policy_html": "<a href=\"{{ link }}\">Taxele de expediere</a> sunt calculate la finalizarea comenzii.",
-      "choose_options": "Alege opțiunile",
-      "choose_product_options": "Alege opțiunile pentru {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "Stoc epuizat",
+      "taxes_included": "Taxe incluse.",
+      "unavailable": "Indisponibil",
       "value_unavailable": "{{ option_value }} – Indisponibil",
       "variant_sold_out_or_unavailable": "Varianta are stocul epuizat sau este indisponibilă",
-      "inventory_in_stock": "În stoc",
-      "inventory_in_stock_show_count": "{{ quantity }} în stoc",
-      "inventory_low_stock": "Stoc redus",
-      "inventory_low_stock_show_count": "Stoc redus: doar {{ quantity }} articole rămase",
-      "inventory_out_of_stock": "Nu există în stoc",
-      "inventory_out_of_stock_continue_selling": "În stoc",
-      "sku": "SKU",
+      "vendor": "Vânzător",
+      "video_exit_message": "{{ title }} deschide videoclipul în ecran complet în aceeași fereastră.",
+      "view_full_details": "Vedeți detaliile complete",
       "volume_pricing": {
         "title": "Stabilire preț per volum",
         "note": "Stabilirea prețului per volum este disponibilă",
@@ -187,9 +196,8 @@
         "price_range": "{{ minimum }} - {{ maximum }}",
         "price_at_each_html": "la {{ price }}/buc."
       },
-      "taxes_included": "Taxe incluse.",
-      "duties_included": "Taxe vamale incluse.",
-      "duties_and_taxes_included": "Taxe și taxe vamale incluse."
+      "xr_button": "Vizualizați în spațiul dvs.",
+      "xr_button_label": "Vizualizați în spațiul dvs., articolul se încarcă în fereastra de realitate augmentată"
     },
     "modal": {
       "label": "Galerie media"
@@ -230,6 +238,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Pagina nu a fost găsită",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Nu s-au găsit rezultate pentru „{{ terms }}”. Verificați ortografia sau utilizați alt cuvânt sau altă expresie.",
       "title": "Rezultatele căutării",
@@ -278,10 +290,6 @@
         "error_heading": "Vă rugăm să ajustați următoarele:",
         "title": "Formular de contact"
       }
-    },
-    "404": {
-      "title": "Pagina nu a fost găsită",
-      "subtext": "404"
     }
   },
   "sections": {

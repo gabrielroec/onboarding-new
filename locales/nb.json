@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,52 @@
   "products": {
     "product": {
       "add_to_cart": "Legg i handlekurv",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Velg alternativer",
+      "choose_product_options": "Velg alternativer for {{ product_name }}",
       "description": "Beskrivelse",
+      "duties_and_taxes_included": "Inkludert tollplikter og avgifter.",
+      "duties_included": "Inkluder tollplikter.",
+      "inventory_in_stock": "På lager",
+      "inventory_in_stock_show_count": "{{ quantity }} på lager",
+      "inventory_low_stock": "Lav lagerbeholdning",
+      "inventory_low_stock_show_count": "Lav lagerbeholdning: {{ quantity }} igjen",
+      "inventory_out_of_stock": "Ikke på lager",
+      "inventory_out_of_stock_continue_selling": "På lager",
+      "media": {
+        "open_media": "Åpne medie {{ index }} i modal",
+        "play_model": "Spill 3D-visning",
+        "play_video": "Spill av video",
+        "gallery_viewer": "Gallerivisning",
+        "load_image": "Last inn bilde {{ index }} i gallerivisning",
+        "load_model": "Last inn 3D-modell {{ index }} i gallerivisning",
+        "load_video": "Spill av video {{ index }} i gallerivisning",
+        "image_available": "Bilde {{ index }} er nå tilgjengelig i gallerivisning"
+      },
+      "nested_label": "{{ title }} for {{ parent_title }}",
       "on_sale": "Salg",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Vis butikkinformasjon",
+        "check_other_stores": "Sjekk tilgjengelighet i andre butikker",
+        "pick_up_available": "Henting tilgjengelig",
+        "pick_up_available_at_html": "Henting tilgjengelig hos <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Henting er for øyeblikket ikke tilgjengelig hos <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Kunne ikke laste inn hentetilgjengelighet",
+        "refresh": "Oppdater"
+      },
+      "price": {
+        "from_price_html": "Fra {{ price }}",
+        "regular_price": "Vanlig pris",
+        "sale_price": "Salgspris",
+        "unit_price": "Enhetspris"
+      },
+      "product_variants": "Produktvarianter",
       "quantity": {
         "label": "Antall",
         "input_label": "Antall for {{ product }}",
@@ -132,52 +177,17 @@
         "max_of": "Maksimum {{ quantity }}",
         "in_cart_aria_label": "Antall ({{ quantity }} i handlekurven)"
       },
-      "price": {
-        "from_price_html": "Fra {{ price }}",
-        "regular_price": "Vanlig pris",
-        "sale_price": "Salgspris",
-        "unit_price": "Enhetspris"
-      },
       "share": "Del dette produktet",
-      "sold_out": "Utsolgt",
-      "unavailable": "Utilgjengelig",
-      "vendor": "Selger",
-      "video_exit_message": "{{ title }} åpner en fullskjermvideo i det samme vinduet.",
-      "xr_button": "Se på din plass",
-      "xr_button_label": "Vis i ditt område, laster element i vindu for utvidet virkelighet",
-      "pickup_availability": {
-        "view_store_info": "Vis butikkinformasjon",
-        "check_other_stores": "Sjekk tilgjengelighet i andre butikker",
-        "pick_up_available": "Henting tilgjengelig",
-        "pick_up_available_at_html": "Henting tilgjengelig hos <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Henting er for øyeblikket ikke tilgjengelig hos <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Kunne ikke laste inn hentetilgjengelighet",
-        "refresh": "Oppdater"
-      },
-      "media": {
-        "open_media": "Åpne medie {{ index }} i modal",
-        "play_model": "Spill 3D-visning",
-        "play_video": "Spill av video",
-        "gallery_viewer": "Gallerivisning",
-        "load_image": "Last inn bilde {{ index }} i gallerivisning",
-        "load_model": "Last inn 3D-modell {{ index }} i gallerivisning",
-        "load_video": "Spill av video {{ index }} i gallerivisning",
-        "image_available": "Bilde {{ index }} er nå tilgjengelig i gallerivisning"
-      },
-      "nested_label": "{{ title }} for {{ parent_title }}",
-      "view_full_details": "Vis alle detaljer",
       "shipping_policy_html": "<a href=\"{{ link }}\">Frakt</a> beregnes ved kassen.",
-      "choose_options": "Velg alternativer",
-      "choose_product_options": "Velg alternativer for {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "Utsolgt",
+      "taxes_included": "Inkludert avgifter.",
+      "unavailable": "Utilgjengelig",
       "value_unavailable": "{{ option_value }} – utilgjengelig",
       "variant_sold_out_or_unavailable": "Varianten er utsolgt eller utilgjengelig",
-      "inventory_in_stock": "På lager",
-      "inventory_in_stock_show_count": "{{ quantity }} på lager",
-      "inventory_low_stock": "Lav lagerbeholdning",
-      "inventory_low_stock_show_count": "Lav lagerbeholdning: {{ quantity }} igjen",
-      "inventory_out_of_stock": "Ikke på lager",
-      "inventory_out_of_stock_continue_selling": "På lager",
-      "sku": "SKU",
+      "vendor": "Selger",
+      "video_exit_message": "{{ title }} åpner en fullskjermvideo i det samme vinduet.",
+      "view_full_details": "Vis alle detaljer",
       "volume_pricing": {
         "title": "Volumprissetting",
         "note": "Volumprissetting er tilgjengelig",
@@ -185,10 +195,8 @@
         "price_range": "{{ minimum }}–{{ maximum }}",
         "price_at_each_html": "til {{ price }}/pr. stk"
       },
-      "product_variants": "Produktvarianter",
-      "taxes_included": "Inkludert avgifter.",
-      "duties_included": "Inkluder tollplikter.",
-      "duties_and_taxes_included": "Inkludert tollplikter og avgifter."
+      "xr_button": "Se på din plass",
+      "xr_button_label": "Vis i ditt område, laster element i vindu for utvidet virkelighet"
     },
     "modal": {
       "label": "Mediegalleri"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Siden finnes ikke",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Fant ingen resultater for «{{ terms }}». Kontroller stavemåten, eller bruk et annet ord.",
       "page": "Side",
@@ -269,10 +281,6 @@
         "error_heading": "Juster følgende:",
         "title": "Kontaktskjema"
       }
-    },
-    "404": {
-      "title": "Siden finnes ikke",
-      "subtext": "404"
     }
   },
   "sections": {

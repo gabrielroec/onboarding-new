@@ -315,6 +315,10 @@
         "paragraph": "Cart and checkout prices always show currency codes",
         "currency_code_enabled": {
           "label": "Currency codes"
+        },
+        "pix_discount_percent": {
+          "label": "PIX discount (%)",
+          "info": "Shows an informational discounted price on product cards and the product page. Set to 0% to hide. Does not change checkout prices."
         }
       }
     },
@@ -864,6 +868,29 @@
         "name": "Featured collection"
       }
     },
+    "article-related-products": {
+      "name": "Related products (blog)",
+      "settings": {
+        "paragraph_metafield": {
+          "content": "Products are loaded from the blog post metafield custom.related_products (list of product references, max 4). Create it under Settings > Custom data > Blog posts."
+        },
+        "title": {
+          "label": "Heading",
+          "default": "Related products"
+        },
+        "swipe_on_mobile": {
+          "label": "Carousel on mobile",
+          "info": "When there are more products than fit in one row, shows a horizontal carousel on small screens."
+        },
+        "enable_desktop_slider": {
+          "label": "Carousel on desktop",
+          "info": "When there are more products than fit in one row, shows a horizontal carousel on large screens."
+        }
+      },
+      "presets": {
+        "name": "Related products (blog)"
+      }
+    },
     "featured-product": {
       "name": "Featured product",
       "blocks": {
@@ -1178,6 +1205,24 @@
         "enable_customer_avatar": {
           "label": "Customer account avatar",
           "info": "Only visible when customers are signed in with Shop. [Manage customer accounts](/admin/settings/customer_accounts)"
+        },
+        "header__exclusive_menu": {
+          "content": "Exclusive collection menu"
+        },
+        "paragraph__exclusive_menu": {
+          "content": "Show an extra main menu link to a collection for logged-in customers who have a specific tag. Does not block the collection URL—anyone with the link can open it."
+        },
+        "exclusive_menu_customer_tag": {
+          "label": "Customer tag",
+          "info": "Must match a tag on the customer exactly (after trim). Example: employee-access"
+        },
+        "exclusive_menu_collection": {
+          "label": "Exclusive collection",
+          "info": "Collection opened when customers click the menu item."
+        },
+        "exclusive_menu_label": {
+          "label": "Menu link label",
+          "info": "If empty, the collection title is used."
         }
       }
     },
@@ -1518,6 +1563,75 @@
       },
       "presets": {
         "name": "Image with text"
+      }
+    },
+    "video-with-text": {
+      "name": "Video with text",
+      "presets": {
+        "name": "Video with text"
+      },
+      "settings": {
+        "header_video": {
+          "content": "Video"
+        },
+        "video_source": {
+          "label": "Video source",
+          "options__1": {
+            "label": "Shopify upload"
+          },
+          "options__2": {
+            "label": "YouTube or Vimeo"
+          }
+        },
+        "video": {
+          "label": "Video",
+          "info": "Upload a file in a format supported by Shopify (e.g. MP4). Very large files may load slowly for customers."
+        },
+        "external_video_url": {
+          "label": "Video URL",
+          "info": "Paste a YouTube or Vimeo link. Other hosts are not supported."
+        },
+        "external_video_alt": {
+          "label": "Video title for accessibility",
+          "info": "Describes the embedded video for screen readers."
+        },
+        "video_autoplay": {
+          "label": "Autoplay"
+        },
+        "video_loop": {
+          "label": "Loop video"
+        },
+        "video_layout": {
+          "label": "Video fit",
+          "options__1": {
+            "label": "Cover (fill, may crop)"
+          },
+          "options__2": {
+            "label": "Contain (letterbox)"
+          }
+        },
+        "height": {
+          "options__1": {
+            "label": "Adapt to video (16:9)"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Video first"
+          },
+          "options__2": {
+            "label": "Text first"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "default": "Video with text"
+            }
+          }
+        }
       }
     },
     "multirow": {
@@ -2044,6 +2158,15 @@
             "show_gift_card_recipient": {
               "label": " Gift card sending options",
               "info": "Customers can add a personal message and schedule the send date. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            }
+          }
+        },
+        "buy_together": {
+          "name": "Buy together",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Complete the look"
             }
           }
         },

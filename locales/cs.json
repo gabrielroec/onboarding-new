@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -118,15 +119,52 @@
   "products": {
     "product": {
       "add_to_cart": "Přidat do košíku",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Výběr možností",
+      "choose_product_options": "Zvolte možnosti pro: {{ product_name }}",
       "description": "Popis",
+      "duties_and_taxes_included": "Včetně cla a daní.",
+      "duties_included": "Včetně cla.",
+      "inventory_in_stock": "Skladem",
+      "inventory_in_stock_show_count": "{{ quantity }} skladem",
+      "inventory_low_stock": "Skladové zásoby docházejí",
+      "inventory_low_stock_show_count": "Skladové zásoby docházejí, zbývající množství: {{ quantity }}",
+      "inventory_out_of_stock": "Není skladem",
+      "inventory_out_of_stock_continue_selling": "Skladem",
+      "media": {
+        "open_media": "Otevřít multimédia {{ index }} v modálním okně",
+        "play_model": "Přehrát v 3D prohlížeči",
+        "play_video": "Přehrát video",
+        "gallery_viewer": "Prohlížeč galerie",
+        "load_image": "Načíst obrázek {{ index }} do zobrazení galerie",
+        "load_model": "Načíst 3D model {{ index }} do zobrazení galerie",
+        "load_video": "Přehrát video {{ index }} v zobrazení galerie",
+        "image_available": "Obrázek {{ index }} je nyní k dispozici v zobrazení galerie"
+      },
+      "nested_label": "{{ title }} pro {{ parent_title }}",
       "on_sale": "Sleva",
-      "share": "Sdílet tento produkt",
-      "sold_out": "Vyprodáno",
-      "unavailable": "Není k dispozici",
-      "vendor": "Vendor",
-      "video_exit_message": "{{ title }} otevře ve stejném okně video na celé obrazovce.",
-      "xr_button": "Zobrazit ve vašem prostoru",
-      "xr_button_label": "Zobrazit ve vašem prostoru: Umožňuje načíst položku v okně rozšířené reality",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Zobrazit informace o obchodě",
+        "check_other_stores": "Zkontrolovat dostupnost v ostatních obchodech",
+        "pick_up_available": "Vyzvednutí k dispozici",
+        "pick_up_available_at_html": "Vyzvednutí je k dispozici v lokalitě <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Vyzvednutí není momentálně v lokalitě <span class=\"color-foreground\">{{ location_name }}</span> k dispozici",
+        "unavailable": "Dostupnost vyzvednutí nebylo možné načíst",
+        "refresh": "Aktualizovat"
+      },
+      "price": {
+        "from_price_html": "Od {{ price }}",
+        "regular_price": "Běžná cena",
+        "sale_price": "Výprodejová cena",
+        "unit_price": "Jednotková cena"
+      },
+      "product_variants": "Varianty produktu",
       "quantity": {
         "label": "Množství",
         "input_label": "Množství produktu {{ product }}",
@@ -141,45 +179,17 @@
         "max_of": "Maximum {{ quantity }}",
         "in_cart_aria_label": "Množství ({{ quantity }} v košíku)"
       },
-      "price": {
-        "from_price_html": "Od {{ price }}",
-        "regular_price": "Běžná cena",
-        "sale_price": "Výprodejová cena",
-        "unit_price": "Jednotková cena"
-      },
-      "pickup_availability": {
-        "view_store_info": "Zobrazit informace o obchodě",
-        "check_other_stores": "Zkontrolovat dostupnost v ostatních obchodech",
-        "pick_up_available": "Vyzvednutí k dispozici",
-        "pick_up_available_at_html": "Vyzvednutí je k dispozici v lokalitě <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Vyzvednutí není momentálně v lokalitě <span class=\"color-foreground\">{{ location_name }}</span> k dispozici",
-        "unavailable": "Dostupnost vyzvednutí nebylo možné načíst",
-        "refresh": "Aktualizovat"
-      },
-      "media": {
-        "open_media": "Otevřít multimédia {{ index }} v modálním okně",
-        "play_model": "Přehrát v 3D prohlížeči",
-        "play_video": "Přehrát video",
-        "gallery_viewer": "Prohlížeč galerie",
-        "load_image": "Načíst obrázek {{ index }} do zobrazení galerie",
-        "load_model": "Načíst 3D model {{ index }} do zobrazení galerie",
-        "load_video": "Přehrát video {{ index }} v zobrazení galerie",
-        "image_available": "Obrázek {{ index }} je nyní k dispozici v zobrazení galerie"
-      },
-      "nested_label": "{{ title }} pro {{ parent_title }}",
-      "view_full_details": "Zobrazit veškeré podrobnosti",
+      "share": "Sdílet tento produkt",
       "shipping_policy_html": "<a href=\"{{ link }}\">Poštovné</a> se vypočítá na pokladně.",
-      "choose_options": "Výběr možností",
-      "choose_product_options": "Zvolte možnosti pro: {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "Vyprodáno",
+      "taxes_included": "Včetně daní.",
+      "unavailable": "Není k dispozici",
       "value_unavailable": "{{ option_value }} – není k dispozici",
       "variant_sold_out_or_unavailable": "Vyprodaná nebo nedostupná varianta",
-      "inventory_in_stock": "Skladem",
-      "inventory_in_stock_show_count": "{{ quantity }} skladem",
-      "inventory_low_stock": "Skladové zásoby docházejí",
-      "inventory_low_stock_show_count": "Skladové zásoby docházejí, zbývající množství: {{ quantity }}",
-      "inventory_out_of_stock": "Není skladem",
-      "sku": "SKU",
-      "inventory_out_of_stock_continue_selling": "Skladem",
+      "vendor": "Vendor",
+      "video_exit_message": "{{ title }} otevře ve stejném okně video na celé obrazovce.",
+      "view_full_details": "Zobrazit veškeré podrobnosti",
       "volume_pricing": {
         "title": "Ceny s objemovou slevou",
         "note": "Ceny s objemovou slevou k dispozici",
@@ -187,10 +197,8 @@
         "price_range": "{{ minimum }}–{{ maximum }}",
         "price_at_each_html": "{{ price }} / ks"
       },
-      "product_variants": "Varianty produktu",
-      "taxes_included": "Včetně daní.",
-      "duties_included": "Včetně cla.",
-      "duties_and_taxes_included": "Včetně cla a daní."
+      "xr_button": "Zobrazit ve vašem prostoru",
+      "xr_button_label": "Zobrazit ve vašem prostoru: Umožňuje načíst položku v okně rozšířené reality"
     },
     "modal": {
       "label": "Galerie multimédií"
@@ -234,6 +242,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Stránka nebyla nalezena",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Nebyly nalezeny žádné výsledky pro {{ terms }}. Zkontrolujte pravopis nebo zadejte jiné slovo či slovní spojení.",
       "title": "Výsledky hledání",
@@ -287,10 +299,6 @@
         "error_heading": "Upravte prosím následující informace:",
         "title": "Kontaktní formulář"
       }
-    },
-    "404": {
-      "title": "Stránka nebyla nalezena",
-      "subtext": "404"
     }
   },
   "sections": {

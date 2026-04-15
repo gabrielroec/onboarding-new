@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,51 @@
   "products": {
     "product": {
       "add_to_cart": "Thêm vào giỏ hàng",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Chọn các tùy chọn",
+      "choose_product_options": "Chọn tùy chọn cho {{ product_name }}",
       "description": "Mô tả",
+      "duties_and_taxes_included": "Đã bao gồm thuế và thuế nhập khẩu.",
+      "duties_included": "Đã bao gồm thuế nhập khẩu.",
+      "inventory_in_stock": "Còn hàng",
+      "inventory_in_stock_show_count": "Còn {{ quantity }} hàng lưu kho",
+      "inventory_low_stock": "Sắp hết hàng",
+      "inventory_low_stock_show_count": "Sắp hết hàng: Còn {{ quantity }}",
+      "inventory_out_of_stock": "Hết hàng",
+      "inventory_out_of_stock_continue_selling": "Còn hàng",
+      "media": {
+        "open_media": "Mở phương tiện {{ index }} trong hộp tương tác",
+        "play_model": "Mở Trình xem 3D",
+        "play_video": "Phát video",
+        "gallery_viewer": "Trình xem thư viện",
+        "load_image": "Tải hình ảnh {{ index }} trong chế độ xem thư viện",
+        "load_model": "Tải mô hình 3D {{ index }} trong chế độ xem thư viện",
+        "load_video": "Phát video {{ index }} trong chế độ xem thư viện",
+        "image_available": "Hình ảnh {{ index }} hiện đã có trong chế độ xem thư viện"
+      },
+      "nested_label": "{{ title }} cho {{ parent_title }}",
       "on_sale": "Giảm giá",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Xem thông tin cửa hàng",
+        "check_other_stores": "Kiểm tra tình trạng còn hàng tại các cửa hàng khác",
+        "pick_up_available": "Có thể nhận hàng tại cửa hàng",
+        "pick_up_available_at_html": "Có thể nhận hàng tại <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Hiện chưa thể nhận hàng tại <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Không thể tải khả năng nhận hàng tại cửa hàng",
+        "refresh": "Làm mới"
+      },
+      "price": {
+        "from_price_html": "Từ {{ price }}",
+        "regular_price": "Giá thông thường",
+        "sale_price": "Giá ưu đãi",
+        "unit_price": "Đơn giá"
+      },
       "product_variants": "Mẫu mã sản phẩm",
       "quantity": {
         "label": "Số lượng",
@@ -133,52 +177,17 @@
         "max_of": "Tối đa {{ quantity }}",
         "in_cart_aria_label": "Số lượng ({{ quantity }} trong giỏ hàng)"
       },
-      "price": {
-        "from_price_html": "Từ {{ price }}",
-        "regular_price": "Giá thông thường",
-        "sale_price": "Giá ưu đãi",
-        "unit_price": "Đơn giá"
-      },
       "share": "Chia sẻ sản phẩm này",
-      "sold_out": "Đã bán hết",
-      "unavailable": "Không có sẵn",
-      "vendor": "Nhà cung cấp",
-      "video_exit_message": "{{ title }} mở video toàn màn hình ở cùng một cửa sổ.",
-      "xr_button": "Xem tại không gian của bạn",
-      "xr_button_label": "Xem tại không gian của bạn, tải mặt hàng trong cửa sổ thực tế ảo tăng cường",
-      "pickup_availability": {
-        "view_store_info": "Xem thông tin cửa hàng",
-        "check_other_stores": "Kiểm tra tình trạng còn hàng tại các cửa hàng khác",
-        "pick_up_available": "Có thể nhận hàng tại cửa hàng",
-        "pick_up_available_at_html": "Có thể nhận hàng tại <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Hiện chưa thể nhận hàng tại <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Không thể tải khả năng nhận hàng tại cửa hàng",
-        "refresh": "Làm mới"
-      },
-      "media": {
-        "open_media": "Mở phương tiện {{ index }} trong hộp tương tác",
-        "play_model": "Mở Trình xem 3D",
-        "play_video": "Phát video",
-        "gallery_viewer": "Trình xem thư viện",
-        "load_image": "Tải hình ảnh {{ index }} trong chế độ xem thư viện",
-        "load_model": "Tải mô hình 3D {{ index }} trong chế độ xem thư viện",
-        "load_video": "Phát video {{ index }} trong chế độ xem thư viện",
-        "image_available": "Hình ảnh {{ index }} hiện đã có trong chế độ xem thư viện"
-      },
-      "nested_label": "{{ title }} cho {{ parent_title }}",
-      "view_full_details": "Xem toàn bộ chi tiết",
       "shipping_policy_html": "<a href=\"{{ link }}\">Phí vận chuyển</a> được tính khi thanh toán.",
-      "choose_options": "Chọn các tùy chọn",
-      "choose_product_options": "Chọn tùy chọn cho {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "Đã bán hết",
+      "taxes_included": "Đã bao gồm thuế.",
+      "unavailable": "Không có sẵn",
       "value_unavailable": "{{ option_value }} - Không khả dụng",
       "variant_sold_out_or_unavailable": "Mẫu mã đã bán hết hoặc không còn hàng",
-      "inventory_in_stock": "Còn hàng",
-      "inventory_in_stock_show_count": "Còn {{ quantity }} hàng lưu kho",
-      "inventory_low_stock": "Sắp hết hàng",
-      "inventory_low_stock_show_count": "Sắp hết hàng: Còn {{ quantity }}",
-      "inventory_out_of_stock": "Hết hàng",
-      "inventory_out_of_stock_continue_selling": "Còn hàng",
-      "sku": "SKU",
+      "vendor": "Nhà cung cấp",
+      "video_exit_message": "{{ title }} mở video toàn màn hình ở cùng một cửa sổ.",
+      "view_full_details": "Xem toàn bộ chi tiết",
       "volume_pricing": {
         "title": "Định giá theo số lượng",
         "note": "Có sẵn định giá theo số lượng",
@@ -186,9 +195,8 @@
         "price_range": "{{ minimum }} - {{ maximum }}",
         "price_at_each_html": "với giá {{ price }}/sản phẩm"
       },
-      "taxes_included": "Đã bao gồm thuế.",
-      "duties_included": "Đã bao gồm thuế nhập khẩu.",
-      "duties_and_taxes_included": "Đã bao gồm thuế và thuế nhập khẩu."
+      "xr_button": "Xem tại không gian của bạn",
+      "xr_button_label": "Xem tại không gian của bạn, tải mặt hàng trong cửa sổ thực tế ảo tăng cường"
     },
     "modal": {
       "label": "Thư viện phương tiện"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Không tìm thấy trang",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Không tìm thấy kết quả cho \"{{ terms }}\". Kiểm tra chính tả hoặc sử dụng một từ hoặc cụm từ khác.",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "Vui lòng điều chỉnh các mục sau:",
         "title": "Biểu mẫu liên hệ"
       }
-    },
-    "404": {
-      "title": "Không tìm thấy trang",
-      "subtext": "404"
     }
   },
   "sections": {

@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -118,16 +119,52 @@
   "products": {
     "product": {
       "add_to_cart": "Dodaj v košarico",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Izberite možnosti",
+      "choose_product_options": "Izberite možnosti za izdelek {{ product_name }}",
       "description": "Opis",
+      "duties_and_taxes_included": "Dajatve in davki vključeni.",
+      "duties_included": "Dajatve vključene.",
+      "inventory_in_stock": "Na zalogi",
+      "inventory_in_stock_show_count": "Na zalogi: {{ quantity }}",
+      "inventory_low_stock": "Majhna zaloga",
+      "inventory_low_stock_show_count": "Majhna zaloga, preostalo še: {{ quantity }}",
+      "inventory_out_of_stock": "Ni na zalogi",
+      "inventory_out_of_stock_continue_selling": "Na zalogi",
+      "media": {
+        "open_media": "Predstavnostne vsebine {{ index }} odprite v modalnem načinu",
+        "play_model": "Predvajaj 3D-pregledovalnik",
+        "play_video": "Predvajaj videoposnetek",
+        "gallery_viewer": "Pregledovalnik galerije",
+        "load_image": "Naložite sliko {{ index }} v pogledu galerije",
+        "load_model": "Naložite 3D-model {{ index }} v pogledu galerije",
+        "load_video": "Predvajajte videoposnetek {{ index }} v pogledu galerije",
+        "image_available": "Slika {{ index }} je zdaj na voljo v pogledu galerije"
+      },
+      "nested_label": "{{ title }} za {{ parent_title }}",
       "on_sale": "Znižanje",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Prikaži podatke o trgovini",
+        "check_other_stores": "Preveri razpoložljivost v drugih trgovinah",
+        "pick_up_available": "Na voljo je osebni prevzem",
+        "pick_up_available_at_html": "Prevzem je mogoč na prevzemnem mestu <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Na prevzemnem mestu <span class=\"color-foreground\">{{ location_name }}</span> osebni prevzem trenutno ni mogoč",
+        "unavailable": "Podatka o razpoložljivosti osebnega prevzema ni mogoče naložiti",
+        "refresh": "Osveži"
+      },
+      "price": {
+        "from_price_html": "Od {{ price }}",
+        "regular_price": "Redna cena",
+        "sale_price": "Znižana cena",
+        "unit_price": "Cena na enoto"
+      },
       "product_variants": "Različice izdelka",
-      "share": "Deli ta izdelek",
-      "sold_out": "Razprodano",
-      "unavailable": "Ni na voljo",
-      "vendor": "Prodajalec",
-      "video_exit_message": "{{ title }} odpre celozaslonski videoposnetek v istem oknu.",
-      "xr_button": "Prikaži v prostoru",
-      "xr_button_label": "Prikaz v prostoru naloži element v oknu z razširjeno resničnostjo",
       "quantity": {
         "label": "Količina",
         "input_label": "Količina za izdelek {{ product }}",
@@ -142,45 +179,17 @@
         "max_of": "Največ {{ quantity }}",
         "in_cart_aria_label": "Količina ({{ quantity }} v košarici)"
       },
-      "price": {
-        "from_price_html": "Od {{ price }}",
-        "regular_price": "Redna cena",
-        "sale_price": "Znižana cena",
-        "unit_price": "Cena na enoto"
-      },
-      "pickup_availability": {
-        "view_store_info": "Prikaži podatke o trgovini",
-        "check_other_stores": "Preveri razpoložljivost v drugih trgovinah",
-        "pick_up_available": "Na voljo je osebni prevzem",
-        "pick_up_available_at_html": "Prevzem je mogoč na prevzemnem mestu <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Na prevzemnem mestu <span class=\"color-foreground\">{{ location_name }}</span> osebni prevzem trenutno ni mogoč",
-        "unavailable": "Podatka o razpoložljivosti osebnega prevzema ni mogoče naložiti",
-        "refresh": "Osveži"
-      },
-      "media": {
-        "open_media": "Predstavnostne vsebine {{ index }} odprite v modalnem načinu",
-        "play_model": "Predvajaj 3D-pregledovalnik",
-        "play_video": "Predvajaj videoposnetek",
-        "gallery_viewer": "Pregledovalnik galerije",
-        "load_image": "Naložite sliko {{ index }} v pogledu galerije",
-        "load_model": "Naložite 3D-model {{ index }} v pogledu galerije",
-        "load_video": "Predvajajte videoposnetek {{ index }} v pogledu galerije",
-        "image_available": "Slika {{ index }} je zdaj na voljo v pogledu galerije"
-      },
-      "nested_label": "{{ title }} za {{ parent_title }}",
-      "view_full_details": "Prikaži vse podrobnosti",
+      "share": "Deli ta izdelek",
       "shipping_policy_html": "<a href=\"{{ link }}\">Dostava</a> se obračuna ob zaključku nakupa.",
-      "choose_options": "Izberite možnosti",
-      "choose_product_options": "Izberite možnosti za izdelek {{ product_name }}",
+      "sku": "Inventarna številka",
+      "sold_out": "Razprodano",
+      "taxes_included": "Davki vključeni.",
+      "unavailable": "Ni na voljo",
       "value_unavailable": "{{ option_value }} – ni na voljo",
       "variant_sold_out_or_unavailable": "Različica je razprodana ali ni na voljo",
-      "inventory_in_stock": "Na zalogi",
-      "inventory_in_stock_show_count": "Na zalogi: {{ quantity }}",
-      "inventory_low_stock": "Majhna zaloga",
-      "inventory_low_stock_show_count": "Majhna zaloga, preostalo še: {{ quantity }}",
-      "inventory_out_of_stock": "Ni na zalogi",
-      "inventory_out_of_stock_continue_selling": "Na zalogi",
-      "sku": "Inventarna številka",
+      "vendor": "Prodajalec",
+      "video_exit_message": "{{ title }} odpre celozaslonski videoposnetek v istem oknu.",
+      "view_full_details": "Prikaži vse podrobnosti",
       "volume_pricing": {
         "title": "Količinski popust",
         "note": "Na voljo je količinski popust",
@@ -188,9 +197,8 @@
         "price_range": "{{ minimum }}–{{ maximum }}",
         "price_at_each_html": "po ceni {{ price }}/kos"
       },
-      "taxes_included": "Davki vključeni.",
-      "duties_included": "Dajatve vključene.",
-      "duties_and_taxes_included": "Dajatve in davki vključeni."
+      "xr_button": "Prikaži v prostoru",
+      "xr_button_label": "Prikaz v prostoru naloži element v oknu z razširjeno resničnostjo"
     },
     "modal": {
       "label": "Galerija predstavnostnih vsebin"
@@ -234,6 +242,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Strani ni mogoče najti",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Za »{{ terms }}« ni bil najden noben rezultat. Preverite črkovanje ali uporabite drugo besedo ali frazo.",
       "page": "Stran",
@@ -287,10 +299,6 @@
         "error_heading": "Prilagodite naslednje:",
         "title": "Obrazec za stik"
       }
-    },
-    "404": {
-      "title": "Strani ni mogoče najti",
-      "subtext": "404"
     }
   },
   "sections": {

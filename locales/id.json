@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,51 @@
   "products": {
     "product": {
       "add_to_cart": "Tambahkan ke keranjang",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Pilih opsi",
+      "choose_product_options": "Pilih opsi untuk {{ product_name }}",
       "description": "Deskripsi",
+      "duties_and_taxes_included": "Termasuk bea cukai dan pajak.",
+      "duties_included": "Termasuk bea cukai.",
+      "inventory_in_stock": "Tersedia",
+      "inventory_in_stock_show_count": "{{ quantity }} tersedia",
+      "inventory_low_stock": "Stok sedikit",
+      "inventory_low_stock_show_count": "Stok sedikit: {{ quantity }} tersisa",
+      "inventory_out_of_stock": "Habis",
+      "inventory_out_of_stock_continue_selling": "Tersedia",
+      "media": {
+        "open_media": "Buka media {{ index }} di modal",
+        "play_model": "Putar Penampil 3D",
+        "play_video": "Putar video",
+        "gallery_viewer": "Penampil Galeri",
+        "load_image": "Muat gambar {{ index }} di tampilan galeri",
+        "load_model": "Muat Model 3D {{ index }} di tampilan galeri",
+        "load_video": "Putar video {{ index }} di tampilan galeri",
+        "image_available": "Gambar {{ index }} kini tersedia di tampilan galeri"
+      },
+      "nested_label": "{{ title }} untuk {{ parent_title }}",
       "on_sale": "Obral",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Lihat informasi toko",
+        "check_other_stores": "Periksa ketersediaan di toko lainnya",
+        "pick_up_available": "Pengambilan tersedia",
+        "pick_up_available_at_html": "Pengambilan dapat dilakukan di <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Saat ini, pengambilan tidak dapat dilakukan di <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Tidak dapat memuat ketersediaan pengambilan",
+        "refresh": "Muat ulang"
+      },
+      "price": {
+        "from_price_html": "Dari {{ price }}",
+        "regular_price": "Harga reguler",
+        "sale_price": "Harga obral",
+        "unit_price": "Harga satuan"
+      },
       "product_variants": "Varian produk",
       "quantity": {
         "label": "Jumlah",
@@ -133,52 +177,17 @@
         "max_of": "Maks. {{ quantity }}",
         "in_cart_aria_label": "Jumlah ({{ quantity }} di keranjang)"
       },
-      "price": {
-        "from_price_html": "Dari {{ price }}",
-        "regular_price": "Harga reguler",
-        "sale_price": "Harga obral",
-        "unit_price": "Harga satuan"
-      },
       "share": "Bagikan produk ini",
-      "sold_out": "Habis",
-      "unavailable": "Tidak Tersedia",
-      "vendor": "Vendor",
-      "video_exit_message": "{{ title }} membuka video layar penuh di jendela yang sama.",
-      "xr_button": "Lihat di lokasi Anda",
-      "xr_button_label": "Lihat di lokasi Anda, muat item di jendela realitas tertambah",
-      "pickup_availability": {
-        "view_store_info": "Lihat informasi toko",
-        "check_other_stores": "Periksa ketersediaan di toko lainnya",
-        "pick_up_available": "Pengambilan tersedia",
-        "pick_up_available_at_html": "Pengambilan dapat dilakukan di <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Saat ini, pengambilan tidak dapat dilakukan di <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Tidak dapat memuat ketersediaan pengambilan",
-        "refresh": "Muat ulang"
-      },
-      "media": {
-        "open_media": "Buka media {{ index }} di modal",
-        "play_model": "Putar Penampil 3D",
-        "play_video": "Putar video",
-        "gallery_viewer": "Penampil Galeri",
-        "load_image": "Muat gambar {{ index }} di tampilan galeri",
-        "load_model": "Muat Model 3D {{ index }} di tampilan galeri",
-        "load_video": "Putar video {{ index }} di tampilan galeri",
-        "image_available": "Gambar {{ index }} kini tersedia di tampilan galeri"
-      },
-      "nested_label": "{{ title }} untuk {{ parent_title }}",
-      "view_full_details": "Lihat detail lengkap",
       "shipping_policy_html": "<a href=\"{{ link }}\">Biaya pengiriman</a> dihitung saat checkout.",
-      "choose_options": "Pilih opsi",
-      "choose_product_options": "Pilih opsi untuk {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "Habis",
+      "taxes_included": "Termasuk pajak.",
+      "unavailable": "Tidak Tersedia",
       "value_unavailable": "{{ option_value }} - Tidak tersedia",
       "variant_sold_out_or_unavailable": "Varian terjual habis atau tidak tersedia",
-      "inventory_in_stock": "Tersedia",
-      "inventory_in_stock_show_count": "{{ quantity }} tersedia",
-      "inventory_low_stock": "Stok sedikit",
-      "inventory_low_stock_show_count": "Stok sedikit: {{ quantity }} tersisa",
-      "inventory_out_of_stock": "Habis",
-      "inventory_out_of_stock_continue_selling": "Tersedia",
-      "sku": "SKU",
+      "vendor": "Vendor",
+      "video_exit_message": "{{ title }} membuka video layar penuh di jendela yang sama.",
+      "view_full_details": "Lihat detail lengkap",
       "volume_pricing": {
         "title": "Harga Volume",
         "note": "Harga volume tersedia",
@@ -186,9 +195,8 @@
         "price_range": "{{ minimum }} - {{ maximum }}",
         "price_at_each_html": "di {{ price }}/satuan"
       },
-      "taxes_included": "Termasuk pajak.",
-      "duties_included": "Termasuk bea cukai.",
-      "duties_and_taxes_included": "Termasuk bea cukai dan pajak."
+      "xr_button": "Lihat di lokasi Anda",
+      "xr_button_label": "Lihat di lokasi Anda, muat item di jendela realitas tertambah"
     },
     "modal": {
       "label": "Galeri media"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Halaman tidak ditemukan",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Tidak ada hasil ditemukan untuk “{{ terms }}”. Periksa ejaan atau gunakan kata atau frasa yang berbeda.",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "Mohon sesuaikan:",
         "title": "Formulir kontak"
       }
-    },
-    "404": {
-      "title": "Halaman tidak ditemukan",
-      "subtext": "404"
     }
   },
   "sections": {

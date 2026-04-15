@@ -43,9 +43,14 @@
         "content"
       ],
       "settings": {}
+    },
+    "article_related_products": {
+      "type": "article-related-products",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "article_related_products"
   ]
 }

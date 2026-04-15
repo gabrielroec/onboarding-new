@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -118,15 +119,52 @@
   "products": {
     "product": {
       "add_to_cart": "Dodaj do koszyka",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Wybierz opcje",
+      "choose_product_options": "Wybierz opcje dla {{ product_name }}",
       "description": "Opis",
+      "duties_and_taxes_included": "Z wliczonymi cłami i podatkami.",
+      "duties_included": "Z wliczonymi cłami.",
+      "inventory_in_stock": "W magazynie",
+      "inventory_in_stock_show_count": "{{ quantity }} w magazynie",
+      "inventory_low_stock": "Niski poziom zapasów",
+      "inventory_low_stock_show_count": "Niski poziom zapasów: pozostało {{ quantity }}",
+      "inventory_out_of_stock": "Zapas wyczerpany",
+      "inventory_out_of_stock_continue_selling": "W magazynie",
+      "media": {
+        "open_media": "Otwórz multimedia {{ index }} w oknie modalnym",
+        "play_model": "Uruchom przeglądarkę 3D",
+        "play_video": "Odtwórz film",
+        "gallery_viewer": "Przeglądarka galerii",
+        "load_image": "Załaduj obraz {{ index }} do widoku galerii",
+        "load_model": "Załaduj model 3D {{ index }} do widoku galerii",
+        "load_video": "Odtwórz film {{ index }} w widoku galerii",
+        "image_available": "Obraz {{ index }} jest teraz dostępny w widoku galerii"
+      },
+      "nested_label": "{{ title }} za {{ parent_title }}",
       "on_sale": "W promocji",
-      "share": "Udostępnij ten produkt",
-      "sold_out": "Wyprzedane",
-      "unavailable": "Niedostępny",
-      "vendor": "Dostawca",
-      "video_exit_message": "{{ title }} otwiera film w trybie pełnoekranowym w tym samym oknie.",
-      "xr_button": "Zobacz w swojej przestrzeni",
-      "xr_button_label": "„Widok w Twojej przestrzeni” wczytuje przedmiot do okna rzeczywistości rozszerzonej",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Wyświetl informacje o sklepie",
+        "check_other_stores": "Sprawdź dostępność w innych sklepach",
+        "pick_up_available": "Odbiór jest możliwy",
+        "pick_up_available_at_html": "Odbiór możliwy w <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Odbiór w <span class=\"color-foreground\">{{ location_name }}</span> jest obecnie niemożliwy",
+        "unavailable": "Nie można załadować gotowości do odbioru",
+        "refresh": "Odśwież"
+      },
+      "price": {
+        "from_price_html": "Od {{ price }}",
+        "regular_price": "Cena regularna",
+        "sale_price": "Cena promocyjna",
+        "unit_price": "Cena jednostkowa"
+      },
+      "product_variants": "Warianty produktów",
       "quantity": {
         "label": "Ilość",
         "input_label": "Ilość dla {{ product }}",
@@ -141,45 +179,17 @@
         "max_of": "Maks. {{ quantity }}",
         "in_cart_aria_label": "Ilość ({{ quantity }} w koszyku)"
       },
-      "price": {
-        "from_price_html": "Od {{ price }}",
-        "regular_price": "Cena regularna",
-        "sale_price": "Cena promocyjna",
-        "unit_price": "Cena jednostkowa"
-      },
-      "pickup_availability": {
-        "view_store_info": "Wyświetl informacje o sklepie",
-        "check_other_stores": "Sprawdź dostępność w innych sklepach",
-        "pick_up_available": "Odbiór jest możliwy",
-        "pick_up_available_at_html": "Odbiór możliwy w <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Odbiór w <span class=\"color-foreground\">{{ location_name }}</span> jest obecnie niemożliwy",
-        "unavailable": "Nie można załadować gotowości do odbioru",
-        "refresh": "Odśwież"
-      },
-      "media": {
-        "open_media": "Otwórz multimedia {{ index }} w oknie modalnym",
-        "play_model": "Uruchom przeglądarkę 3D",
-        "play_video": "Odtwórz film",
-        "gallery_viewer": "Przeglądarka galerii",
-        "load_image": "Załaduj obraz {{ index }} do widoku galerii",
-        "load_model": "Załaduj model 3D {{ index }} do widoku galerii",
-        "load_video": "Odtwórz film {{ index }} w widoku galerii",
-        "image_available": "Obraz {{ index }} jest teraz dostępny w widoku galerii"
-      },
-      "nested_label": "{{ title }} za {{ parent_title }}",
-      "view_full_details": "Pokaż kompletne dane",
+      "share": "Udostępnij ten produkt",
       "shipping_policy_html": "<a href=\"{{ link }}\">Koszt wysyłki</a> obliczony przy realizacji zakupu.",
-      "choose_options": "Wybierz opcje",
-      "choose_product_options": "Wybierz opcje dla {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "Wyprzedane",
+      "taxes_included": "Z wliczonymi podatkami.",
+      "unavailable": "Niedostępny",
       "value_unavailable": "{{ option_value }} - niedostępny",
       "variant_sold_out_or_unavailable": "Wariant wyprzedany lub niedostępny",
-      "inventory_in_stock": "W magazynie",
-      "inventory_in_stock_show_count": "{{ quantity }} w magazynie",
-      "inventory_low_stock": "Niski poziom zapasów",
-      "inventory_low_stock_show_count": "Niski poziom zapasów: pozostało {{ quantity }}",
-      "inventory_out_of_stock": "Zapas wyczerpany",
-      "inventory_out_of_stock_continue_selling": "W magazynie",
-      "sku": "SKU",
+      "vendor": "Dostawca",
+      "video_exit_message": "{{ title }} otwiera film w trybie pełnoekranowym w tym samym oknie.",
+      "view_full_details": "Pokaż kompletne dane",
       "volume_pricing": {
         "title": "Ceny zależne od wolumenu",
         "note": "Ceny zależne od wolumenu są dostępne",
@@ -187,10 +197,8 @@
         "price_range": "{{ minimum }} - {{ maximum }}",
         "price_at_each_html": "{{ price }}/szt."
       },
-      "product_variants": "Warianty produktów",
-      "taxes_included": "Z wliczonymi podatkami.",
-      "duties_included": "Z wliczonymi cłami.",
-      "duties_and_taxes_included": "Z wliczonymi cłami i podatkami."
+      "xr_button": "Zobacz w swojej przestrzeni",
+      "xr_button_label": "„Widok w Twojej przestrzeni” wczytuje przedmiot do okna rzeczywistości rozszerzonej"
     },
     "modal": {
       "label": "Galeria multimediów"
@@ -234,6 +242,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Nie znaleziono strony",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Nie znaleziono wyników dla “{{ terms }}”. Sprawdź pisownię lub użyj innego słowa lub zwrotu.",
       "page": "Strona",
@@ -287,10 +299,6 @@
         "error_heading": "Dostosuj następujące dane:",
         "title": "Formularz kontaktowy"
       }
-    },
-    "404": {
-      "title": "Nie znaleziono strony",
-      "subtext": "404"
     }
   },
   "sections": {

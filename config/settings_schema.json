@@ -1396,6 +1396,17 @@
         "id": "currency_code_enabled",
         "label": "t:settings_schema.currency_format.settings.currency_code_enabled.label",
         "default": true
+      },
+      {
+        "type": "range",
+        "id": "pix_discount_percent",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "t:settings_schema.currency_format.settings.pix_discount_percent.label",
+        "info": "t:settings_schema.currency_format.settings.pix_discount_percent.info",
+        "default": 0
       }
     ]
   },

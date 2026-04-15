@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -116,8 +117,51 @@
   "products": {
     "product": {
       "add_to_cart": "添加到购物车",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "选择选项",
+      "choose_product_options": "选择用于 {{ product_name }} 的选项",
       "description": "描述",
+      "duties_and_taxes_included": "已含关税和税费。",
+      "duties_included": "已含关税。",
+      "inventory_in_stock": "现货",
+      "inventory_in_stock_show_count": "{{ quantity }} 件存货",
+      "inventory_low_stock": "低库存",
+      "inventory_low_stock_show_count": "低库存：剩余 {{ quantity }}",
+      "inventory_out_of_stock": "缺货",
+      "inventory_out_of_stock_continue_selling": "现货",
+      "media": {
+        "open_media": "在模态窗口中打开媒体文件 {{ index }}",
+        "play_model": "播放 3D 查看器",
+        "play_video": "播放视频",
+        "gallery_viewer": "图库查看器",
+        "load_image": "在图库视图中加载图片 {{ index }}",
+        "load_model": "在图库视图中加载 3D 模型 {{ index }}",
+        "load_video": "在图库视图中播放视频 {{ index }}",
+        "image_available": "图片 {{ index }} 现已在图库视图中可用"
+      },
+      "nested_label": "{{ title }}，适用于 {{ parent_title }}",
       "on_sale": "促销",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "查看商店信息",
+        "check_other_stores": "查看在其他商店的可用情况",
+        "pick_up_available": "提供取货服务",
+        "pick_up_available_at_html": "<span class=\"color-foreground\">{{ location_name }}</span> 提供取货服务",
+        "pick_up_unavailable_at_html": "<span class=\"color-foreground\">{{ location_name }}</span> 目前不提供取货服务",
+        "unavailable": "无法加载取货服务可用情况",
+        "refresh": "刷新"
+      },
+      "price": {
+        "from_price_html": "来自 {{ price }}",
+        "regular_price": "常规价格",
+        "sale_price": "促销价",
+        "unit_price": "单价"
+      },
       "product_variants": "产品多属性",
       "quantity": {
         "label": "数量",
@@ -133,52 +177,17 @@
         "max_of": "最大值 {{ quantity }}",
         "in_cart_aria_label": "数量（购物车中有 {{ quantity }} 件）"
       },
-      "price": {
-        "from_price_html": "来自 {{ price }}",
-        "regular_price": "常规价格",
-        "sale_price": "促销价",
-        "unit_price": "单价"
-      },
       "share": "分享此产品",
-      "sold_out": "售罄",
-      "unavailable": "不可用",
-      "vendor": "厂商",
-      "video_exit_message": "{{ title }} 在同一窗口中打开全屏视频。",
-      "xr_button": "在您的空间中查看",
-      "xr_button_label": "在您的空间中查看，在增强现实窗口中加载商品",
-      "pickup_availability": {
-        "view_store_info": "查看商店信息",
-        "check_other_stores": "查看在其他商店的可用情况",
-        "pick_up_available": "提供取货服务",
-        "pick_up_available_at_html": "<span class=\"color-foreground\">{{ location_name }}</span> 提供取货服务",
-        "pick_up_unavailable_at_html": "<span class=\"color-foreground\">{{ location_name }}</span> 目前不提供取货服务",
-        "unavailable": "无法加载取货服务可用情况",
-        "refresh": "刷新"
-      },
-      "media": {
-        "open_media": "在模态窗口中打开媒体文件 {{ index }}",
-        "play_model": "播放 3D 查看器",
-        "play_video": "播放视频",
-        "gallery_viewer": "图库查看器",
-        "load_image": "在图库视图中加载图片 {{ index }}",
-        "load_model": "在图库视图中加载 3D 模型 {{ index }}",
-        "load_video": "在图库视图中播放视频 {{ index }}",
-        "image_available": "图片 {{ index }} 现已在图库视图中可用"
-      },
-      "nested_label": "{{ title }}，适用于 {{ parent_title }}",
-      "view_full_details": "查看完整详细信息",
       "shipping_policy_html": "结账时计算的<a href=\"{{ link }}\">运费</a>。",
-      "choose_options": "选择选项",
-      "choose_product_options": "选择用于 {{ product_name }} 的选项",
+      "sku": "SKU",
+      "sold_out": "售罄",
+      "taxes_included": "已含税费。",
+      "unavailable": "不可用",
       "value_unavailable": "{{ option_value }} - 不可用",
       "variant_sold_out_or_unavailable": "多属性已售罄或不可用",
-      "inventory_in_stock": "现货",
-      "inventory_in_stock_show_count": "{{ quantity }} 件存货",
-      "inventory_low_stock": "低库存",
-      "inventory_low_stock_show_count": "低库存：剩余 {{ quantity }}",
-      "inventory_out_of_stock": "缺货",
-      "inventory_out_of_stock_continue_selling": "现货",
-      "sku": "SKU",
+      "vendor": "厂商",
+      "video_exit_message": "{{ title }} 在同一窗口中打开全屏视频。",
+      "view_full_details": "查看完整详细信息",
       "volume_pricing": {
         "title": "批量定价",
         "note": "提供批量定价",
@@ -186,9 +195,8 @@
         "price_range": "{{ minimum }} - {{ maximum }}",
         "price_at_each_html": "{{ price }}/件"
       },
-      "taxes_included": "已含税费。",
-      "duties_included": "已含关税。",
-      "duties_and_taxes_included": "已含关税和税费。"
+      "xr_button": "在您的空间中查看",
+      "xr_button_label": "在您的空间中查看，在增强现实窗口中加载商品"
     },
     "modal": {
       "label": "媒体图库"
@@ -226,6 +234,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "找不到页面",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "未找到“{{ terms }}”的结果。请检查拼写或使用其他词或短语。",
       "results_with_count": {
@@ -269,10 +281,6 @@
         "error_heading": "请调整以下内容：",
         "title": "联系表"
       }
-    },
-    "404": {
-      "title": "找不到页面",
-      "subtext": "404"
     }
   },
   "sections": {

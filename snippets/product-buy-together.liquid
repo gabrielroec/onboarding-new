@@ -1,0 +1,124 @@
+{% comment %}
+  Compre junto — usa metacampo product reference custom.product_recommended
+  Parâmetros: product, block, product_form_id, section_id
+{% endcomment %}
+
+{% liquid
+  assign recommended_product = product.metafields.custom.product_recommended.value
+  assign show = false
+  assign rec_variant = nil
+
+  if recommended_product != blank and recommended_product.id != product.id
+    assign rec_variant = recommended_product.first_available_variant
+    if rec_variant == blank
+      assign rec_variant = recommended_product.selected_or_first_available_variant
+    endif
+    if rec_variant != blank and rec_variant.available and recommended_product.available
+      assign show = true
+    endif
+  endif
+%}
+
+{% if show %}
+  {{ 'component-product-buy-together.css' | asset_url | stylesheet_tag }}
+
+  <script>
+    window.productBuyTogetherStrings = window.productBuyTogetherStrings || {};
+    window.productBuyTogetherStrings['{{ section_id }}'] = {
+      error: {{ 'products.product.buy_together.error' | t | json }},
+      adding: {{ 'products.product.buy_together.adding' | t | json }}
+    };
+  </script>
+  <script src="{{ 'product-buy-together.js' | asset_url }}" defer="defer"></script>
+
+  {% liquid
+    assign heading = block.settings.heading | strip
+    if heading == blank
+      assign heading = 'products.product.buy_together.heading' | t
+    endif
+    assign img = rec_variant.featured_image | default: recommended_product.featured_image
+  %}
+
+  <product-buy-together
+    class="product-buy-together"
+    data-section-id="{{ section_id }}"
+    data-product-form-id="{{ product_form_id }}"
+    data-recommended-variant-id="{{ rec_variant.id }}"
+    {{ block.shopify_attributes }}
+  >
+    <div class="product-buy-together__inner">
+      <h3 class="product-buy-together__heading">{{ heading | escape }}</h3>
+
+      <div class="product-buy-together__row">
+        <div class="product-buy-together__media">
+          {% if img != blank %}
+            <img
+              src="{{ img | image_url: width: 220 }}"
+              alt="{{ recommended_product.title | escape }}"
+              loading="lazy"
+              width="220"
+              height="{{ 220 | divided_by: img.aspect_ratio | ceil }}"
+            >
+          {% else %}
+            {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+        </div>
+        <div class="product-buy-together__info">
+          <p class="product-buy-together__title">
+            <a href="{{ recommended_product.url }}">{{ recommended_product.title | escape }}</a>
+          </p>
+          {% liquid
+            assign rec_on_sale = false
+            if rec_variant.compare_at_price > rec_variant.price
+              assign rec_on_sale = true
+            endif
+          %}
+          <div class="product-buy-together__price{% if rec_on_sale %} product-buy-together__price-row--sale{% endif %}">
+            {% if rec_on_sale %}
+              <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
+              <span class="product-buy-together__price-current">
+                {% if settings.currency_code_enabled %}
+                  {{ rec_variant.price | money_with_currency }}
+                {% else %}
+                  {{ rec_variant.price | money }}
+                {% endif %}
+              </span>
+              <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+              <span class="product-buy-together__price-compare">
+                <s>
+                  {% if settings.currency_code_enabled %}
+                    {{ rec_variant.compare_at_price | money_with_currency }}
+                  {% else %}
+                    {{ rec_variant.compare_at_price | money }}
+                  {% endif %}
+                </s>
+              </span>
+            {% else %}
+              <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+              <span class="product-buy-together__price-current">
+                {% if settings.currency_code_enabled %}
+                  {{ rec_variant.price | money_with_currency }}
+                {% else %}
+                  {{ rec_variant.price | money }}
+                {% endif %}
+              </span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-buy-together__actions">
+      <button
+        type="button"
+        class="button button--full-width button--secondary product-buy-together__submit"
+        data-buy-together-button
+      >
+        <span>{{ 'products.product.buy_together.button' | t }}</span>
+        {%- render 'loading-spinner' -%}
+      </button>
+    </div>
+
+    <p class="product-buy-together__error" data-buy-together-error role="alert" hidden></p>
+  </product-buy-together>
+{% endif %}

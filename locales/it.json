@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "general": {
     "password_page": {
@@ -117,8 +118,52 @@
   "products": {
     "product": {
       "add_to_cart": "Aggiungi al carrello",
+      "buy_together": {
+        "heading": "Complete the look",
+        "button": "Add both to cart",
+        "adding": "Adding…",
+        "error": "Could not add items. Please try again."
+      },
+      "choose_options": "Scegli opzioni",
+      "choose_product_options": "Scegli opzioni per {{ product_name }}",
       "description": "Descrizione",
+      "duties_and_taxes_included": "Dazi e imposte inclusi.",
+      "duties_included": "Dazi inclusi.",
+      "inventory_in_stock": "Disponibile",
+      "inventory_in_stock_show_count": "{{ quantity }} disponibile/i",
+      "inventory_low_stock": "Scorte ridotte",
+      "inventory_low_stock_show_count": "Scorte ridotte: ne restano {{ quantity }}",
+      "inventory_out_of_stock": "Esaurito",
+      "inventory_out_of_stock_continue_selling": "Disponibile",
+      "media": {
+        "open_media": "Apri contenuti multimediali {{ index }} in finestra modale",
+        "play_model": "Riproduci visualizzatore 3D",
+        "play_video": "Riproduci video",
+        "gallery_viewer": "Visualizzatore di galleria",
+        "load_image": "Carica immagine {{ index }} in visualizzazione galleria",
+        "load_model": "Carica modello 3D {{ index }} in visualizzazione galleria",
+        "load_video": "Riproduci video {{ index }} in visualizzazione galleria",
+        "image_available": "L'immagine {{ index }} è ora disponibile in visualizzazione galleria"
+      },
+      "nested_label": "{{ title }} per {{ parent_title }}",
       "on_sale": "In offerta",
+      "percent_off": "{{ percent }}% OFF",
+      "pickup_availability": {
+        "view_store_info": "Visualizza i dettagli del negozio",
+        "check_other_stores": "Verifica la disponibilità in altri negozi",
+        "pick_up_available": "Ritiro disponibile",
+        "pick_up_available_at_html": "Ritiro disponibile presso la sede <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Ritiro attualmente non disponibile presso la sede <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Impossibile caricare la disponibilità di ritiro",
+        "refresh": "Aggiorna"
+      },
+      "price": {
+        "from_price_html": "Da {{ price }}",
+        "regular_price": "Prezzo di listino",
+        "sale_price": "Prezzo scontato",
+        "unit_price": "Prezzo unitario"
+      },
+      "product_variants": "Varianti di prodotto",
       "quantity": {
         "label": "Quantità",
         "input_label": "Quantità per {{ product }}",
@@ -133,52 +178,17 @@
         "max_of": "Max {{ quantity }}",
         "in_cart_aria_label": "Quantità ({{ quantity }} nel carrello)"
       },
-      "price": {
-        "from_price_html": "Da {{ price }}",
-        "regular_price": "Prezzo di listino",
-        "sale_price": "Prezzo scontato",
-        "unit_price": "Prezzo unitario"
-      },
       "share": "Condividi questo prodotto",
-      "sold_out": "Esaurito",
-      "unavailable": "Non disponibile",
-      "vendor": "Fornitore",
-      "video_exit_message": "{{ title }} apre un video a schermo intero nella stessa finestra.",
-      "xr_button": "Visualizza nel tuo spazio",
-      "xr_button_label": "Visualizza nel tuo spazio, carica l'articolo nella finestra della realtà aumentata",
-      "pickup_availability": {
-        "view_store_info": "Visualizza i dettagli del negozio",
-        "check_other_stores": "Verifica la disponibilità in altri negozi",
-        "pick_up_available": "Ritiro disponibile",
-        "pick_up_available_at_html": "Ritiro disponibile presso la sede <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Ritiro attualmente non disponibile presso la sede <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Impossibile caricare la disponibilità di ritiro",
-        "refresh": "Aggiorna"
-      },
-      "media": {
-        "open_media": "Apri contenuti multimediali {{ index }} in finestra modale",
-        "play_model": "Riproduci visualizzatore 3D",
-        "play_video": "Riproduci video",
-        "gallery_viewer": "Visualizzatore di galleria",
-        "load_image": "Carica immagine {{ index }} in visualizzazione galleria",
-        "load_model": "Carica modello 3D {{ index }} in visualizzazione galleria",
-        "load_video": "Riproduci video {{ index }} in visualizzazione galleria",
-        "image_available": "L'immagine {{ index }} è ora disponibile in visualizzazione galleria"
-      },
-      "nested_label": "{{ title }} per {{ parent_title }}",
-      "view_full_details": "Visualizza dettagli completi",
       "shipping_policy_html": "<a href=\"{{ link }}\">Spese di spedizione</a> calcolate al check-out.",
-      "choose_options": "Scegli opzioni",
-      "choose_product_options": "Scegli opzioni per {{ product_name }}",
+      "sku": "SKU",
+      "sold_out": "Esaurito",
+      "taxes_included": "Imposte incluse.",
+      "unavailable": "Non disponibile",
       "value_unavailable": "{{ option_value }} - Non disponibile",
       "variant_sold_out_or_unavailable": "Variante esaurita o non disponibile",
-      "inventory_in_stock": "Disponibile",
-      "inventory_in_stock_show_count": "{{ quantity }} disponibile/i",
-      "inventory_low_stock": "Scorte ridotte",
-      "inventory_low_stock_show_count": "Scorte ridotte: ne restano {{ quantity }}",
-      "inventory_out_of_stock": "Esaurito",
-      "inventory_out_of_stock_continue_selling": "Disponibile",
-      "sku": "SKU",
+      "vendor": "Fornitore",
+      "video_exit_message": "{{ title }} apre un video a schermo intero nella stessa finestra.",
+      "view_full_details": "Visualizza dettagli completi",
       "volume_pricing": {
         "title": "Prezzi basati sui volumi",
         "note": "Prezzi basati sui volumi disponibili",
@@ -186,10 +196,8 @@
         "price_range": "{{ minimum }} - {{ maximum }}",
         "price_at_each_html": "a {{ price }}/ciascuno"
       },
-      "product_variants": "Varianti di prodotto",
-      "taxes_included": "Imposte incluse.",
-      "duties_included": "Dazi inclusi.",
-      "duties_and_taxes_included": "Dazi e imposte inclusi."
+      "xr_button": "Visualizza nel tuo spazio",
+      "xr_button_label": "Visualizza nel tuo spazio, carica l'articolo nella finestra della realtà aumentata"
     },
     "modal": {
       "label": "Galleria contenuti multimediali"
@@ -230,6 +238,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Pagina non trovata",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Nessun risultato per \"{{ terms }}\". Controlla l'ortografia o usa una parola o una frase diversa.",
       "page": "Pagina",
@@ -278,10 +290,6 @@
         "error_heading": "Correggi gli errori seguenti:",
         "title": "Modulo di contatto"
       }
-    },
-    "404": {
-      "title": "Pagina non trovata",
-      "subtext": "404"
     }
   },
   "sections": {

@@ -1,0 +1,38 @@
+{% comment %}
+  Preço promocional PIX (informativo). @param price_cents @param variant (opcional)
+{% endcomment %}
+{%- liquid
+  assign pct = settings.pix_discount_percent | default: 0 | plus: 0
+  if pct > 100
+    assign pct = 100
+  endif
+
+  assign render_ok = false
+  assign pix_cents = 0
+
+  if pct > 0 and price_cents != blank and price_cents > 0
+    if variant == blank or variant.available
+      assign factor = 100 | minus: pct
+      assign raw_pix = price_cents | times: factor
+      assign pix_cents = raw_pix | plus: 50 | divided_by: 100
+      if pix_cents > 0 and pix_cents < price_cents
+        assign render_ok = true
+      endif
+    endif
+  endif
+-%}
+
+{%- if render_ok -%}
+  {%- liquid
+    if settings.currency_code_enabled
+      assign pix_money = pix_cents | money_with_currency
+    else
+      assign pix_money = pix_cents | money
+    endif
+  -%}
+  <div class="pix-price-display" data-pix-discount-percent="{{ pct }}">
+    <p class="pix-price-display__text">
+      {{- 'content.pix_price_line' | t: amount: pix_money, percent: pct -}}
+    </p>
+  </div>
+{%- endif -%}
